@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Sixième</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+    <style>
+      /*.mySlides {display: none}*/
+      .slideshow-container {text-align: center}
+      .prev, .next {
+        cursor: pointer;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        background-color: grey;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .prev:hover, .next:hover {background-color: black}
+    </style>
+    <script>
+      var slideIndex = 0;
+
+      function plusSlide(n) {
+        showSlide(slideIndex += n);
+      }
+
+      function showSlide(n) {
+        var slides = document.getElementsByClassName("mySlides");
+        if (n >= slides.length) {slideIndex = 0}    
+        if (n < 0) {slideIndex = slides.length-1}
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex].style.display = "inline";  
+      }
+    </script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.free.fr</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths selected">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <div class="slideshow-container">
+          <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+          <img src="airedisque-img0.png" class="mySlides" alt="">
+          <img src="airedisque-img1.png" class="mySlides" alt="">
+          <img src="airedisque-img2.png" class="mySlides" alt="">
+          <img src="airedisque-img3.png" class="mySlides" alt="">
+          <img src="airedisque-img4.png" class="mySlides" alt="">
+          <img src="airedisque-img5.png" class="mySlides" alt="">
+          <img src="airedisque-img6.png" class="mySlides" alt="">
+          <img src="airedisque-img7.png" class="mySlides" alt="">
+          <img src="airedisque-img8.png" class="mySlides" alt="">
+          <img src="airedisque-img9.png" class="mySlides" alt="">
+          <img src="airedisque-img10.png" class="mySlides" alt="">
+          <a class="next" onclick="plusSlide(1)">&#10095;</a>
+        </div>
+        <script>showSlide(slideIndex);</script>
+      </div>
+    </div>
+  </body>
+</html>
+

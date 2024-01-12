@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Variations d'une fonction et allure de sa courbe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+    <script src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.free.fr</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths selected">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1>VARIATIONS D'UNE FONCTION ET ALLURE DE SA COURBE :</h1>
+        <hr>
+        <h2>Rappel du cours</h2>
+        <div class="encadre-gris">
+          <ul>
+            <li>Si, dans un intervalle, des nombres et leurs images sont <span class="bleugras">toujours dans le même ordre</span>, la fonction est dite <span class="bleugras">croissante</span> sur cet intervalle.</li>
+            <li>Si des nombres et leurs images sont <span class="bleugras">toujours dans l'ordre contraire</span>, la fonction est dite <span class="bleugras">décroissante</span> sur cet intervalle.</li>
+          </ul>
+        </div>
+        <h2>Quel est l'impact de ceci sur la représentation graphique de la fonction ?</h2>
+        <p>Soit f la fonction définie par f(x) = <input type="text" id="input" value="x^2" onchange="tracer()"></p>
+        <p>Faites glisser x<sub>1</sub> et x<sub>2</sub> sur l'axe des abscisses en restant dans un intervalle où les variations de f ne changent pas de sens.</p>
+        <ul>
+          <li>
+            Si le segment entre f(x<sub>1</sub>) et f(x<sub>2</sub>) reste toujours <span style="color:red">rouge</span> (conservation de l'ordre), la fonction est 
+            <select name="s1" size="1">
+              <option>??</option>
+              <option>croissante</option>
+              <option>décroissante</option>
+              <option>ni l'un, ni l'autre</option>
+            </select>
+            et C<sub>f</sub> 
+            <select name="s2" size="1">
+              <option>??</option>
+              <option>monte</option>
+              <option>descend</option>
+              <option>ni l'un, ni l'autre</option>
+            </select>
+          </li>
+          <li>
+            Si le segment reste toujours <span style="color:blue">bleu</span> (inversion de l'ordre), la fonction est 
+            <select name="s1" size="1">
+              <option>??</option>
+              <option>croissante</option>
+              <option>décroissante</option>
+              <option>ni l'un, ni l'autre</option>
+            </select>
+            et C<sub>f</sub> 
+            <select name="s2" size="1">
+              <option>??</option>
+              <option>monte</option>
+              <option>descend</option>
+              <option>ni l'un, ni l'autre</option>
+            </select>
+          </li>
+        </ul>
+        <br>
+        <div style="text-align: center"><div id="fig" class="jxgbox" style="width:600px; height:500px;"></div></div>
+        <script>
+          tracer()
+
+          function tracer() {
+            var fig = JXG.JSXGraph.initBoard('fig', {boundingbox: [-5, 5, 5, -5], axis:true, grid:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            var txtfonction = document.getElementById('input').value;
+            var f = fig.jc.snippet(txtfonction, true, 'x', true);
+            var graph = fig.create('functiongraph',[f, -5, 5], {strokeWidth:2, strokeColor:'black', highlightStrokeColor:'black'});
+            var x1 = fig.create('glider', [1.3, 0, fig.defaultAxes.x], {name:'x_1', size:2, label: {offset:[-3,-20]}});
+            var y1 = fig.create('point', [function () {return x1.X()}, function () {return f(x1.X())}], {visible:false});
+            var fx1 = fig.create('point', [0, function () {return f(x1.X())}], {name:'f(x_1)', size:0});
+            var xy1 = fig.create('segment', [x1, y1], {strokeColor:'grey', dash:2});
+            var yfx1 = fig.create('segment', [y1, fx1], {strokeColor:'grey', dash:2});
+            var droite_support_x2 = fig.create('line', [x1, [10, 0]], {straightFirst:false,visible:false});
+            var x2 = fig.create('glider', [1.6, 0, droite_support_x2], {name:'x_2', size:2, label: {offset:[-3,-20]}});
+            var y2 = fig.create('point', [function () {return x2.X()}, function () {return f(x2.X())}], {visible:false});
+            var fx2 = fig.create('point', [0, function () {return f(x2.X())}], {name:'f(x_2)', size:0});
+            var xy2 = fig.create('segment', [x2, y2], {strokeColor:'grey', dash:2});
+            var yfx2 = fig.create('segment', [y2, fx2], {strokeColor:'grey', dash:2});
+            var fx1fx2 = fig.create('segment', [fx1, fx2], {strokeWidth:4, strokeColor: function () {return (f(x2.X())>f(x1.X())) ? 'red' : 'blue'}});
+          }
+        </script>
+        <br>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+@charset "utf-8";
+* {font-family: Arial, Verdana, Helvetica, Geneva, sans-serif}
+body {margin: 0px; background-color: #e0e0e0}
+p {padding-left: 22px; text-indent: -22px; margin: 0.15cm}
+h1 {color: #3a8bcc; font-size: 170%; font-style: italic}
+h2 {color: #3a8bcc; font-size: 140%; margin-bottom: 0.1cm; margin-top: 1cm}
+h3 {color: #3a8bcc; font-size: 100%; margin-bottom: 0.1cm; margin-top: 0.1cm}
+h1 hr {margin: 0px}
+fieldset {border: 3px solid #bdbdbd; border-radius: 10px; margin-bottom: 30px}
+fieldset.highlight {background-color: BlanchedAlmond}
+legend {color: #3a8bcc; font-size: 140%; font-weight: bold}
+ul {list-style: square; margin-top: 0.1cm; margin-left: 0.7cm; margin-right: 0.7cm; margin-bottom: 0.1cm; padding: 0cm}
+ol {margin-top: 0.1cm; margin-left: 0.7cm; margin-right: 0.7cm; margin-bottom: 0.1cm; padding: 0cm}
+li {padding-top: 0.1cm; padding-bottom: 0.1cm}
+img {vertical-align: middle}
+a img {border-width: 0}
+a {color: #32965f; font-weight: bold; text-decoration: none}
+a:hover, a:focus {color: #20603d}
+input.texte {text-align: center}
+.bleugras {font-weight: bold; color: #1070c0}
+.encadre-gris {background-color: #f5f5f5; padding: 0.8em}
+
+#marges {margin: auto; max-width: 1000px; min-width: 400px; background-color: white; box-shadow:4px 4px 10px #bdbdbd, -4px 0px 10px #bdbdbd; border-radius:0em 0em 1em 1em;}
+#bandeau {background-color: #3e95da; padding: 1.5em}
+#tfontanet {font-size: 250%; font-style: italic; font-weight: bold; letter-spacing: 2pt; padding-left: 30px; color: white}
+@media screen and (max-width: 600px) {#tfontanet {font-size: 150%}}
+@media screen and (min-width: 601px) and (max-width: 800px) {#tfontanet {font-size: 220%}}
+#menu {background-color: #1070c0; padding: 10px; line-height: 2em;}
+#menu a {color: white; text-decoration: none; font-size: 130%; font-weight: bold; margin-right: 20px}
+#menu a.maths {color: wheat}
+#menu a.info {color: mediumaquamarine}
+#menu a.selected {border-bottom: 8px solid white}
+#menu a:hover, #menu a:focus {border-bottom: 8px solid white}
+#contenu {padding: 1.5em}
+#debutpage {min-height: 175px}
+#debutpageimg {float:left; width:208px; height:175px}
+#debutpagecontenu {margin-left: 248px}
+@media screen and (max-width: 600px) {
+  #debutpage {min-height: auto}
+  #debutpageimg {display: none}
+  #debutpagecontenu {margin-left: 0px}
+}

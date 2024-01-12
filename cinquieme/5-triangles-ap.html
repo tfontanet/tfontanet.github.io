@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Droites remarquables du triangle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+    <script src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.free.fr</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths selected">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1>Droites remarquables du triangle</h1>
+        <hr>
+        <h2>Commençons par quelques précisions de vocabulaire nécessaires pour la suite :</h2>
+        <div class="encadre-gris">
+          <ul>
+            <li>Trois droites qui se coupent en un seul point sont dites <span class="bleugras">concourantes</span>. (et non pas sécantes !)<br>Le point commun à ces droites est appelé <span class="bleugras">point de concours</span>.</li>
+            <li>Une droite passant par un sommet d'un triangle et coupant le côté opposé en son milieu est appelée <span class="bleugras">médiane</span> du triangle</li>
+            <li>Une droite passant par un sommet d'un triangle et coupant le côté opposé perpendiculairement est appelée <span class="bleugras">hauteur</span> du triangle</li>
+            <li>Le cercle qui passe par les trois sommets d'un triangle est appelé <span class="bleugras">cercle circonscrit</span> au triangle</li>
+          </ul>
+        </div>
+        <h2>Figure 1 :</h2>
+        Dans la figure ci-dessous on a tracé en noir les
+        <select name="f1-0" size="1">
+        <option>??</option>
+        <option>bissectrices</option>
+        <option>hauteurs</option>
+        <option>médianes</option>
+        <option>médiatrices</option>
+        </select>
+        du triangle.<br>
+        En déplaçant les sommets du triangle avec la souris ces trois droites restent-elles concourantes ? <input type="radio" name="f1-1">Oui <input type="radio" name="f1-1">Non<br>
+        Le point de concours peut-il passer à l'extérieur du triangle ? <input type="radio" name="f1-2">Oui <input type="radio" name="f1-2">Non<br>
+        <br>
+        <div id="fig1" class="jxgbox" style="width:500px; height:400px;"></div>
+        <script>
+          var fig1 = JXG.JSXGraph.initBoard('fig1', {boundingbox: [-5, 4, 5, -4], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig1.renderer.container.style.backgroundColor = '#f5f5f5';
+          var A1 = fig1.create('point', [-0.5,1.4], {name:'A'});
+          var B1 = fig1.create('point', [-1.6,-0.6], {name:'B'});
+          var C1 = fig1.create('point', [1.3,-0.6], {name:'C'});
+          var AB1 = fig1.create('segment', [A1, B1]);
+          var AC1 = fig1.create('segment', [A1, C1]);
+          var BC1 = fig1.create('segment', [B1, C1]);
+          var ABC1 = fig1.createElement('polygon', [A1,B1,C1], {fillColor:'#59bfcb', highlightFillColor:'#59bfcb'});
+          var hauteur_issue_de_A1 = fig1.create('perpendicular', [BC1, A1]);
+          var hauteur_issue_de_B1 = fig1.create('perpendicular', [AC1, B1]);
+          var hauteur_issue_de_C1 = fig1.create('perpendicular', [AB1, C1]);
+          var H1 = fig1.create('intersection', [hauteur_issue_de_A1, hauteur_issue_de_B1, 0], {name:'H', size:0});
+          
+          // Ce qui suit permet de mettre en évidence les angles droits (même quand H sort du triangle)
+          var I1 = fig1.create('intersection', [BC1, hauteur_issue_de_A1, 0], {name:'I', visible:false});
+          var BI1 = fig1.create('segment', [B1, I1], {dash: 1});
+          var BIA1 = fig1.create('angle', [B1, I1, A1], {withLabel:false, radius:0.2, type:'square'});
+          var J1 = fig1.create('intersection', [AC1, hauteur_issue_de_B1, 0], {name:'J', visible:false});
+          var CJ1 = fig1.create('segment', [C1, J1], {dash: 1});
+          var CJB1 = fig1.create('angle', [C1, J1, B1], {withLabel:false, radius:0.2, type:'square'});
+          var K1 = fig1.create('intersection', [AB1, hauteur_issue_de_C1, 0], {name:'K', visible:false});
+          var AK1 = fig1.create('segment', [A1, K1], {dash: 1});
+          var AKC1 = fig1.create('angle', [A1, K1, C1], {withLabel:false, radius:0.2, type:'square'});
+          fig1.update();
+        </script>
+        <br>
+        <h2>Figure 2 :</h2>
+        Dans la figure ci-dessous on a tracé en noir les
+        <select name="f2-0" size="1">
+        <option>??</option>
+        <option>bissectrices</option>
+        <option>hauteurs</option>
+        <option>médianes</option>
+        <option>médiatrices</option>
+        </select>
+        du triangle.<br>
+        En déplaçant les sommets du triangle avec la souris ces trois droites restent-elles concourantes ? <input type="radio" name="f2-1">Oui <input type="radio" name="f2-1">Non<br>
+        Le point de concours peut-il passer à l'extérieur du triangle ? <input type="radio" name="f2-2">Oui <input type="radio" name="f2-2">Non<br>
+        <br>
+        <div id="fig2" class="jxgbox" style="width:500px; height:400px;"></div>
+        <script>
+          var fig2 = JXG.JSXGraph.initBoard('fig2', {boundingbox: [-5, 4, 5, -4], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig2.renderer.container.style.backgroundColor = '#f5f5f5';
+          var A2 = fig2.create('point', [-0.5,1.4], {name:'A'});
+          var B2 = fig2.create('point', [-1.6,-0.6], {name:'B'});
+          var C2 = fig2.create('point', [1.3,-0.6], {name:'C'});
+          var AB2 = fig2.create('segment', [A2, B2]);
+          var AC2 = fig2.create('segment', [A2, C2]);
+          var BC2 = fig2.create('segment', [B2, C2]);
+          var ABC2 = fig2.createElement('polygon', [A2,B2,C2], {fillColor:'#59bfcb', highlightFillColor:'#59bfcb'});
+          var Ap2 = fig2.create('midpoint', [B2, C2], {name:"A'", visible:false});
+          var Bp2 = fig2.create('midpoint', [A2, C2], {name:"B'", visible:false});
+          var Cp2 = fig2.create('midpoint', [A2, B2], {name:"C'", visible:false});
+          var mediane_issue_de_A2 = fig2.create('line', [A2, Ap2], {strokeColor:'black'});
+          var mediane_issue_de_B2 = fig2.create('line', [B2, Bp2], {strokeColor:'black'});
+          var mediane_issue_de_C2 = fig2.create('line', [C2, Cp2], {strokeColor:'black'});
+          var G2 = fig2.create('intersection', [mediane_issue_de_A2, mediane_issue_de_B2, 0], {name:'G', size:0});
+          fig2.update();
+        </script>
+        <br>
+        <h2>Figure 3 :</h2>
+        Dans la figure ci-dessous on a tracé en noir les
+        <select name="f3-0" size="1">
+        <option>??</option>
+        <option>bissectrices</option>
+        <option>hauteurs</option>
+        <option>médianes</option>
+        <option>médiatrices</option>
+        </select>
+        du triangle.<br>
+        En déplaçant les sommets du triangle avec la souris ces trois droites restent-elles concourantes ? <input type="radio" name="f3-1">Oui <input type="radio" name="f3-1">Non<br>
+        Le point de concours peut-il passer à l'extérieur du triangle ? <input type="radio" name="f3-2">Oui <input type="radio" name="f3-2">Non<br>
+        Ce point de concours est-il toujours le centre du cercle circonscrit au triangle ? <input type="radio" name="f3-3">Oui <input type="radio" name="f3-3">Non<br>
+        <br>
+        <div id="fig3" class="jxgbox" style="width:500px; height:400px;"></div>
+        <script>
+          var fig3 = JXG.JSXGraph.initBoard('fig3', {boundingbox: [-5, 4, 5, -4], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig3.renderer.container.style.backgroundColor = '#f5f5f5';
+          var A3 = fig3.create('point', [-0.5,1.4], {name:'A'});
+          var B3 = fig3.create('point', [-1.6,-0.6], {name:'B'});
+          var C3 = fig3.create('point', [1.3,-0.6], {name:'C'});
+          var AB3 = fig3.create('segment', [A3, B3]);
+          var AC3 = fig3.create('segment', [A3, C3]);
+          var BC3 = fig3.create('segment', [B3, C3]);
+          var ABC3 = fig3.createElement('polygon', [A3,B3,C3], {fillColor:'#59bfcb', highlightFillColor:'#59bfcb'});
+          var Ap3 = fig3.create('midpoint', [B3, C3], {name:"A'", visible:false});
+          var Bp3 = fig3.create('midpoint', [A3, C3], {name:"B'", visible:false});
+          var Cp3 = fig3.create('midpoint', [A3, B3], {name:"C'", visible:false});
+          var mediatriceAB3 = fig3.create('perpendicular', [AB3, Cp3], {strokeColor:'black'});
+          var mediatriceAC3 = fig3.create('perpendicular', [AC3, Bp3], {strokeColor:'black'});
+          var mediatriceBC3 = fig3.create('perpendicular', [BC3, Ap3], {strokeColor:'black'});
+          var O3 = fig3.create('intersection', [mediatriceAB3, mediatriceAC3, 0], {name:'O', size:0});
+          var cercle3 = fig3.create('circle', [O3, A3]);
+          
+          // Ce qui suit permet de mettre en évidence les angles droits
+          var OApC3 = fig3.create('angle', [O3, Ap3, C3], {withLabel:false, radius:0.2, type:'square'});
+          var OBpA3 = fig3.create('angle', [O3, Bp3, A3], {withLabel:false, radius:0.2, type:'square'});
+          var OCpB3 = fig3.create('angle', [O3, Cp3, B3], {withLabel:false, radius:0.2, type:'square'});
+          fig3.update();
+        </script>
+        <br>
+        <h2>Figure 4 :</h2>
+        Dans la figure ci-dessous on a tracé en noir les
+        <select name="f3-0" size="1">
+        <option>??</option>
+        <option>bissectrices</option>
+        <option>hauteurs</option>
+        <option>médianes</option>
+        <option>médiatrices</option>
+        </select>
+        du triangle.<br>
+        En déplaçant les sommets du triangle avec la souris ces trois droites restent-elles concourantes ? <input type="radio" name="f3-1">Oui <input type="radio" name="f3-1">Non<br>
+        Le point de concours peut-il passer à l'extérieur du triangle ? <input type="radio" name="f3-2">Oui <input type="radio" name="f3-2">Non<br>
+        Ce point de concours est-il toujours le centre du cercle inscrit dans le triangle ? <input type="radio" name="f3-3">Oui <input type="radio" name="f3-3">Non<br>
+        <br>
+        <div id="fig4" class="jxgbox" style="width:500px; height:400px;"></div>
+        <script>
+          var fig4 = JXG.JSXGraph.initBoard('fig4', {boundingbox: [-5, 4, 5, -4], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig4.renderer.container.style.backgroundColor = '#f5f5f5';
+          var A4 = fig4.create('point', [-0.5,1.4], {name:'A'});
+          var B4 = fig4.create('point', [-1.6,-0.6], {name:'B'});
+          var C4 = fig4.create('point', [1.3,-0.6], {name:'C'});
+          var AB4 = fig4.create('segment', [A4, B4]);
+          var AC4 = fig4.create('segment', [A4, C4]);
+          var BC4 = fig4.create('segment', [B4, C4]);
+          var ABC4 = fig4.createElement('polygon', [A4,B4,C4], {fillColor:'#59bfcb', highlightFillColor:'#59bfcb'});
+          var bissectriceA4 = fig4.create('bisector', [B4, A4, C4], {strokeColor:'black'});
+          var bissectriceB4 = fig4.create('bisector', [A4, B4, C4], {strokeColor:'black'});
+          var bissectriceC4 = fig4.create('bisector', [A4, C4, B4], {strokeColor:'black'});
+          var O4 = fig4.create('intersection', [bissectriceA4, bissectriceB4, 0], {name:'O', size:0});
+          var cercle3 = fig4.create('incircle', [A4,B4,C4]);
+          fig4.update();
+        </script>
+        <br>
+        <h2>Figure 5 :</h2>
+        Dans la figure ci-dessous on a tracé en noir la médiatrice de [BC] ainsi que la hauteur et la médiane issues de A.<br>
+        Déplacez les sommets du triangle avec la souris de telle sorte que ces trois droites soient confondues.<br>
+        On observe alors que le triangle est :
+        <select name="f4-0" size="1">
+        <option>??</option>
+        <option>rectangle en A</option>
+        <option>isocèle en A</option>
+        <option>isocèle rectangle en A</option>
+        <option>équilatéral</option>
+        <option>quelconque</option>
+        </select>
+        <br><br>
+        <div id="fig5" class="jxgbox" style="width:500px; height:400px;"></div>
+        <script>
+          var fig5 = JXG.JSXGraph.initBoard('fig5', {boundingbox: [-5, 4, 5, -4], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig5.renderer.container.style.backgroundColor = '#f5f5f5';
+          var A4 = fig5.create('point', [-1.2,1.4], {name:'A'});
+          var B4 = fig5.create('point', [-1.6,-0.6], {name:'B'});
+          var C4 = fig5.create('point', [1.3,-0.6], {name:'C'});
+          var AB4 = fig5.create('segment', [A4, B4]);
+          var AC4 = fig5.create('segment', [A4, C4]);
+          var BC4 = fig5.create('segment', [B4, C4]);
+          var ABC4 = fig5.createElement('polygon', [A4,B4,C4], {fillColor:'#59bfcb', highlightFillColor:'#59bfcb'});
+          var Ap4 = fig5.create('midpoint', [B4, C4], {name:"A'", visible:false});
+          var mediane_issue_de_A4 = fig5.create('line', [A4, Ap4], {strokeColor:'black'});
+          var mediatriceBC4 = fig5.create('perpendicular', [BC4, Ap4], {strokeColor:'black'});
+          var hauteur_issue_de_A4 = fig5.create('perpendicular', [BC4, A4]);
+          fig5.update();
+        </script>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>

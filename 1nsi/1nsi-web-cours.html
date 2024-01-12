@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Écrire une page web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+    <script>
+      function killcss() {
+        // Supprime les styles définis dans "style.css"
+        document.getElementsByTagName("link")[0].remove();
+        // Supprime les styles définis au niveau des balises
+        for (let node of document.getElementsByTagName('*')) {node.removeAttribute("style");}
+      }
+    </script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.free.fr</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info selected">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1>Écrire une page web</h1>
+        <hr>
+        <h2>Généralités :</h2>
+        Une page Web est un fichier texte conçu pour être lu par n'importe quel navigateur internet (Chrome, Edge, Firefox, Safari,...) et être affiché sur n'importe quel type de terminal (ordinateur, smartphone, tablette, imprimante,...).<br>
+        La personne qui écrit une page web ne sait donc pas à l'avance avec quel navigateur cette page va être consultée, ni avec quelle taille d'écran&nbsp;!<br>
+        <br>
+        Les navigateurs doivent être capables d’interpréter trois langages&nbsp;:<br>
+        <div class="encadre-gris">
+          <ul>
+            <li>Le <span class="bleugras">HTML</span> qui contient le texte à afficher et précise la structure de la page (titres, paragraphes, images ou vidéos à insérer…).</li>
+            <li>Le <span class="bleugras">CSS</span> qui permet de définir la mise en forme des différents éléments de la page.</li>
+            <li>Le <span class="bleugras">Javascript</span> qui est un langage de programmation permettant de rendre certaines pages web plus interactives.</li>
+          </ul>
+        </div>
+        <br>
+        Ce document que vous êtes en train de lire est lui-même une page web et, comme pour toute page Web, vous pouvez consulter son code HTML-CSS-JavaScript en faisant un clic droit sur la page puis en sélectionnant “afficher le code source”.<br>
+        <br>
+        Pour écrire une page web, il suffit de deux logiciels&nbsp;:<br>
+        <div class="encadre-gris">
+          <ul>
+            <li>Un <span class="bleugras">éditeur de texte</span> pour modifier le code source de la page.</li>
+            <li>Un <span class="bleugras">navigateur</span> pour en vérifier le rendu.</li>
+          </ul>
+        </div>
+        <br>
+        Après avoir écrit une page web et l'avoir testée sur son ordinateur, il faut <span class="bleugras">l'héberger</span> sur un <span class="bleugras">serveur web</span> qui est un ordinateur tout le temps allumé sur lequel tourne un logiciel qui est en permanence à l'écoute des requêtes des internautes.<br>
+        <h2>HTML :</h2>
+        Le HTML (HyperText Markup Language) est un langage qui utilise des <span class="bleugras">balises</span> pour structurer les pages web.<br>
+        Par exemple, la structure minimale d'une page web est&nbsp;:
+        <pre class= "encadre-gris" style="margin-bottom: 0px">
+&lt;!doctype html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+      &lt;title&gt;Titre de l'onglet du navigateur&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      Contenu visible de la page
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <div class= "encadre-gris" style="text-align: center"><a href="https://jsbin.com/jacucaf/1/edit?html,output" Title="Lien extérieur">Visualiser dans JSBin <img src="../lien-externe.png" alt=""></a></div>
+        <br>
+        La balise <span class="bleugras">&lt;head&gt;</span> permet de préciser les propriétés de la page web comme par exemple le titre affiché sur l'onglet du navigateur ou l'encodage utilisé.<br>
+        La balise <span class="bleugras">&lt;body&gt;</span> contient la partie visible de la page&nbsp;: texte, images...<br>
+        <br>
+        Pour créer une page web en HTML, il suffit de créer un fichier ayant l'extension <span class="bleugras">.html</span> et d'y copier-coller la structure minimale ci-dessus. En double-cliquant sur ce fichier, vous pourrez alors voir le résultat dans votre navigateur web.<br>
+        <br>
+        <h3>Quelques cours HTML pour démarrer&nbsp;:</h3>
+        <div class="encadre-gris">
+          <ul>
+            <li><a href="https://www.w3schools.com/html/html_intro.asp" Title="Lien extérieur">W3 Schools <img src="../lien-externe.png" alt=""></a><br>(Lire de la page "Introduction" jusqu'à la page "Paragraphs", puis lire le reste en fonction de vos besoins ;-)</li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started" Title="Lien extérieur">Fondation Mozilla <img src="../lien-externe.png" alt=""></a></li>
+            <li><a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3" Title="Lien extérieur">OpenClassrooms <img src="../lien-externe.png" alt=""></a></li>
+          </ul>
+        </div>
+        <br>
+        <h3>Exemples de code HTML à tester en ligne&nbsp;:</h3>
+        <div class="encadre-gris">
+           &nbsp;&nbsp; <a href="https://jsbin.com/kubepog/edit?html,output" Title="Lien extérieur">Exemple 1 <img src="../lien-externe.png" alt=""></a>
+           &nbsp;&nbsp; <a href="https://jsbin.com/wamadox/edit?html,output" Title="Lien extérieur">Exemple 2 <img src="../lien-externe.png" alt=""></a>
+        </div>
+        <h2>CSS :</h2>
+        Le langage CSS (Cascading Style Sheets) permet de mettre en forme une page écrite en HTML en précisant comment afficher les différents éléments HTML de la page (couleurs, alignements, espacements, polices de caractères,...)<br>
+        <br>
+        Les <span class="bleugras">directives CSS</span> d'une page web peuvent être ajoutées directement dans le code HTML de cette page en ajoutant un attribut <span class="bleugras">style</span> à n'importe quelle balise HTML de la page. Toutefois, on préfère en général rassembler toutes les directives CSS dans un fichier séparé appelé <span class="bleugras">feuille de style</span>.<br>
+        <br>
+        Dans le site <a href="https://www.csszengarden.com/" Title="Lien extérieur">CSS Zen Garden <img src="../lien-externe.png" alt=""></a>, on garde exactement le même fichier HTML, mais on l'associe à des feuilles de styles différentes selon les liens sur lesquels on clique.<br>
+        La différence de rendu est impressionnante et met bien en évidence la puissance du langage CSS !<br>
+        <br>
+        <h3>Quelques cours CSS pour démarrer&nbsp;:</h3>
+        <div class="encadre-gris">
+          <ul>
+            <li><a href="https://www.w3schools.com/css/css_intro.asp" Title="Lien extérieur">W3 Schools <img src="../lien-externe.png" alt=""></a><br>(Lire de la page "Introduction" jusqu'à la page "Box Model", puis lire le reste en fonction de vos besoins ;-)</li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps/Getting_started" Title="Lien extérieur">Fondation Mozilla <img src="../lien-externe.png" alt=""></a></li>
+            <li><a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061278-integrez-le-css-dans-la-page-html" Title="Lien extérieur">OpenClassrooms <img src="../lien-externe.png" alt=""></a></li>
+          </ul>
+        </div>
+        <br>
+        <h3>Exemples de code HTML-CSS à tester en ligne&nbsp;:</h3>
+        <div class="encadre-gris">
+           &nbsp;&nbsp; <a href="https://jsbin.com/raliked/edit?html,css,output" Title="Lien extérieur">Exemple 3 <img src="../lien-externe.png" alt=""></a>
+           &nbsp;&nbsp; <a href="https://jsbin.com/diteziz/edit?html,css,output" Title="Lien extérieur">Exemple 4 <img src="../lien-externe.png" alt=""></a>
+        </div>
+        <h2>Javascript :</h2>
+        Le langage JavaScript est un langage de programmation qui permet de tout modifier dans la page web courante, en fonction des actions de l'internaute (souris, clavier,...).<br>
+        Par exemple, en cliquant sur <input type="button" value="Rendre cette page moche" onclick="killcss()">, vous allez lancer un script Javascript qui va supprimer toutes les directives CSS appliquées à cette page&nbsp;! (Pour retrouver l'allure normale de la page, il suffit de la recharger&nbsp;;-)<br>
+        <br>
+        L'utilisation de Javascript est beaucoup moins fréquente que celle de HTML et CSS car ces derniers suffisent pour la plupart des usages.<br>
+        <br>
+        <h3>Quelques cours JavaScript pour démarrer&nbsp;:</h3>
+        <div class="encadre-gris">
+          <ul>
+            <li><a href="https://fabien-torre.fr/Enseignement/Cours/javascript.php" Title="Lien extérieur">site de Fabien Torre <img src="../lien-externe.png" alt=""></a></li>
+            <li><a href="https://www.w3schools.com/js/js_intro.asp" Title="Lien extérieur">W3 Schools <img src="../lien-externe.png" alt=""></a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript" Title="Lien extérieur">Fondation Mozilla <img src="../lien-externe.png" alt=""></a></li>
+          </ul>
+        </div>
+        <br>
+        <h3>Exemples de code Javascript à tester en ligne&nbsp;:</h3>
+        <div class="encadre-gris">
+           &nbsp;&nbsp; <a href="https://jsbin.com/vizukuj/edit?html,js,output" Title="Lien extérieur">Exemple 5 <img src="../lien-externe.png" alt=""></a>
+           &nbsp;&nbsp; <a href="https://jsbin.com/letabeg/edit?html,output" Title="Lien extérieur">Exemple 6 <img src="../lien-externe.png" alt=""></a>
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>

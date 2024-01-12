@@ -1,0 +1,28 @@
+# 1) Tester le programme ci-dessous et verifier qu'il fonctionne
+#    Chercher sur internet la signification des differentes lignes de code
+#
+# 2) Analyse de la reponse envoyee par le serveur :
+#    Ligne HTTP: que signifie le 200 ? et le OK ?
+#    Ligne Date: la date est celle de quel ordinateur : du client ou du serveur ?
+#    Ligne Content-Length: de quelle longueur s'agit-il ?
+#    Comment le corps de la reponse est-il separe de l'entete ?
+
+import socket
+
+mySocket = socket.socket()
+mySocket.connect(("tfontanet.free.fr", 80))
+
+requete = \
+"""
+GET / HTTP/1.1
+Host: tfontanet.free.fr
+Connection: close
+
+"""
+requete = bytes(requete, 'utf-8')
+mySocket.sendall(requete)
+reponse = mySocket.recv(4096)
+reponse = str(reponse, 'utf-8')
+print(reponse)
+
+mySocket.close()

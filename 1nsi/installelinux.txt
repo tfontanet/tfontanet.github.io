@@ -1,0 +1,60 @@
+######################### Mode d'emploi ##############################
+# Dans le terminal Linux, taper la commande :   bash installelinux.txt
+######################################################################
+
+cd ~
+
+# Mise a jour de Linux
+sudo apt update
+sudo apt upgrade -y
+sudo apt autoremove -y
+
+# Installer la langue francaise pour que Gameshell soit en francais
+# (prise en compte au prochain redemarrage de la machine virtuelle Linux)
+sudo apt install -y locales-all
+sudo localectl set-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR
+
+# Telecharger et Installer Gameshell
+sudo apt install gettext-base man-db psmisc nano tree bsdmainutils x11-apps
+wget https://github.com/phyver/GameShell/releases/download/latest/gameshell.sh
+mkdir ~/Gameshell
+mv gameshell.sh ~/Gameshell
+
+# Telecharger et Installer Thonny
+wget https://github.com/thonny/thonny/releases/download/v4.1.2/thonny-4.1.2.bash
+yes "" | bash ./thonny-4.1.2.bash
+rm -f ./thonny-4.1.2.bash
+
+mkdir -p ".config/Thonny/"
+echo [general] > ".config/Thonny/configuration.ini"
+echo language = fr_FR >> ".config/Thonny/configuration.ini"
+echo [view] >> ".config/Thonny/configuration.ini"
+echo variablesview.visible = True >> ".config/Thonny/configuration.ini"
+echo [layout] >> ".config/Thonny/configuration.ini"
+echo zoomed = True >> ".config/Thonny/configuration.ini"
+echo [edit] >> ".config/Thonny/configuration.ini"
+echo automatic_calltips = True >> ".config/Thonny/configuration.ini"
+echo automatic_completions = True >> ".config/Thonny/configuration.ini"
+echo [debugger] >> ".config/Thonny/configuration.ini"
+echo frames_in_separate_windows = False >> ".config/Thonny/configuration.ini"
+echo preferred_debugger = faster >> ".config/Thonny/configuration.ini"
+
+# Installer Geany
+sudo apt install -y geany
+
+mkdir -p ".config/geany/"
+echo [geany] > ".config/geany/geany.conf"
+echo sidebar_visible=false >> ".config/geany/geany.conf"
+echo msgwindow_visible=false >> ".config/geany/geany.conf"
+
+# Telecharger et Installer Filius
+sudo apt install -y default-jdk
+wget https://www.lernsoftware-filius.de/downloads/Setup/filius_2.4.1_all.deb
+sudo apt install -y ./filius_2.4.1_all.deb
+rm -f ./filius_2.4.1_all.deb
+
+# Installer HTTPie
+sudo apt install -y httpie
+
+# Installer DB Browser for SQLite
+sudo apt install -y sqlitebrowser

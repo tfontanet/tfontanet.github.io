@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Effet d'une symétrie centrale et d'une symétrie axiale sur une figure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+    <script src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.free.fr</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths selected">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1>Effet d'une symétrie centrale et d'une symétrie axiale sur une figure</h1>
+        <hr>
+        Ne confondez pas les symétries centrales avec les symétries axiales !<br>
+        La preuve ci-dessous en comparant l'effet de la <span style="color: red">symétrie de centre 0</span> et de la <span style="color: blue">symétrie d'axe (d)</span> sur le <span style="color: grey">polygône gris</span>.<br>
+        <h2>Conseils :</h2>
+        <ul>
+          <li>En vous appuyant sur les définitions du cours, essayez de vous représenter les images du polygône gris par les deux symétries avant de cliquer sur les cases à cocher pour les faire apparaître.</li>
+          <li>N'hésitez pas à faire bouger le centre O et l'axe (d) et à observer l'effet sur les polygônes symétriques.</li>
+        </ul>
+        <br><br>
+        <div id="fig" class="jxgbox" style="width:800px; height:500px; margin: 0 auto;"></div>
+        <script>
+          var fig = JXG.JSXGraph.initBoard('fig', {boundingbox: [-8, 5, 8, -5], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig.renderer.container.style.backgroundColor = '#fdfaec';
+          
+          // poly1 est le polygone gris et fixe de départ
+          var xlist = [-6,-4,-3,-2,-3,-6]; ylist = [-2, 2, 2, 1,-1,-2];
+          var sommets_poly1 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly1[i] = fig.create('point', [xlist[i],ylist[i]], {visible:false});
+          }
+          var poly1 = fig.create('polygon', sommets_poly1, {fillColor:'grey', fillOpacity: 0.1, withLines:false});
+          
+          // A est le point qui glisse sur le contour de poly1
+          var contour_poly1 = fig.create('curve', [xlist,ylist], {strokeColor:'black', strokeWidth:2, highlight:false});
+          var A = fig.create('glider', [contour_poly1], {name:'A', strokeColor:'black', fillColor:'grey'});
+          
+          // Symétrie centrale par rapport à 0
+          var O = fig.create('point', [0,1], {name:'O', strokeColor:'red', fillColor:'red'});
+          var symO = fig.create('transform', [Math.PI,O], {type:'rotate'});
+          var A_1 = fig.create('point', [A,symO], {name:'A_1', strokeColor:'red', fillColor:'red', visible:false});
+          var AA_1 = fig.create('segment', [A,A_1], {strokeColor:'red', fillColor:'red', strokeWidth:1, dash:2, visible:false})
+          var sommets_poly2 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly2[i] = fig.create('point', [sommets_poly1[i],symO], {visible:false});
+          }
+          var poly2 = fig.create('polygon', sommets_poly2, {fillColor:'red', fillOpacity: 0.1, highlight:false, borders:{strokeColor:'red', strokeWidth:2}, visible:false});
+          var checkbox_symO = fig.create('checkbox', [-7.5, 4.5, 'Symétrie centrale par rapport à O']);
+          JXG.addEvent(checkbox_symO.rendNodeCheckbox, 'change', function() {A_1.setProperty({visible:this.Value()}); AA_1.setProperty({visible:this.Value()}); poly2.setProperty({visible:this.Value()});}, checkbox_symO);
+          
+          // Symétrie axiale par rapport à d
+          var D = fig.create('point', [0,-3], {name:'(d)', strokeColor:'blue', fillColor:'blue'});
+          var d = fig.create('line', [O,D], {strokeColor:'blue', strokeWidth:2});
+          var symd = fig.create('transform', [d], {type:'reflect'});
+          var A_2 = fig.create('point', [A,symd], {name:'A_2', strokeColor:'blue', fillColor:'blue', visible:false});
+          var AA_2 = fig.create('segment', [A,A_2], {strokeColor:'blue', fillColor:'blue', strokeWidth:1, dash:2, visible:false})
+          var sommets_poly3 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly3[i] = fig.create('point', [sommets_poly1[i],symd], {visible:false});
+          }
+          var poly3 = fig.create('polygon', sommets_poly3, {fillColor:'blue', fillOpacity: 0.1, highlight:false, borders:{strokeColor:'blue', strokeWidth:2}, visible:false});
+          var checkbox_symd = fig.create('checkbox', [-7.5, 4, 'Symétrie axiale par rapport à (d)']);
+          JXG.addEvent(checkbox_symd.rendNodeCheckbox, 'change', function() {A_2.setProperty({visible:this.Value()}); AA_2.setProperty({visible:this.Value()}); poly3.setProperty({visible:this.Value()});}, checkbox_symd);
+          
+          fig.update();
+        </script>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Constructions avec GeoGebra</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <script src="../../head.js"></script>
+    <script>
+      function verifie()
+      {
+        var applet = ggbApplet;
+        if (applet.getObjectNumber()==0)
+          alert("La figure est vide !");
+        else if (!applet.exists("V") || !applet.exists("E") || !applet.exists("R") || !applet.exists("T"))
+          alert("Les points V, E, R et T n'ont pas tous été définis !");
+        else
+        {
+          applet.evalCommand("Parallelogramme_Ok$=If(Distance(Midpoint(V, R), Midpoint(E, T))==0,1,0)");
+          applet.evalCommand("DistanceVE_Ok$=If(Distance(V,E)==5,1,0)");
+          applet.evalCommand("DistanceER_Ok$=If(Distance(E,R)==7,1,0)");
+          applet.evalCommand("DistanceET_Ok$=If(Distance(E,T)==9,1,0)");
+          if (applet.getValue("Parallelogramme_Ok$")==0)
+            alert("VERT n'est pas un parallélogramme");
+          else if (applet.getValue("DistanceVE_Ok$")==0)
+            alert("VE n'est pas égal à 5 cm");
+          else if (applet.getValue("DistanceER_Ok$")==0)
+            alert("ER n'est pas égal à 7 cm");
+          else if (applet.getValue("DistanceET_Ok$")==0)
+            alert("ET n'est pas égal à 9 cm");
+          else
+            alert("Bravo, vous avez réussi !");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.free.fr</span>
+        <br><br>
+        <div id="menu">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../../cinquieme/index.html" class="maths selected">Cinquième</a>
+          <a href="../../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../../seconde/index.html" class="maths">Seconde</a>
+          <a href="../../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1 style="margin-bottom: 0px">Constructions avec GeoGebra</h1><hr>
+        <div style="text-align: center"><b>&lt;</b> <a href="5-parallelogrammes-geogebra-1.html">Exercice précédent</a> | <a href="5-parallelogrammes-geogebra-3.html">Exercice suivant</a> <b>&gt;</b></div>
+        <br>
+        <div style="background-color: #f1f1f1; padding: 10px">
+          Exercice 2 : Construire ci-dessous le parallélogramme VERT tel que : VE = 5 cm ; ER = 7 cm et ET = 9 cm
+          <br><br>
+          <div style="text-align: center">Une fois terminé, n'oubliez pas de : <input type="button" value="Vérifier la figure" onclick="verifie();"></div>
+        </div>
+        <br>
+        <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+        <script>
+          var parameters = {"width":970, "height":500, "showResetIcon":true, "material_id":"sc2WY3Pg"};
+          var applet = new GGBApplet(parameters, '5.0');
+          window.onload = function() { applet.inject('applet_container'); }
+        </script>
+        <div id="applet_container" style="text-align: center"> </div>
+      </div>
+      <div id="msg"></div>
+    </div>
+  </body>
+</html>

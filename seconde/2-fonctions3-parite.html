@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Parité d'une fonction et allure de sa courbe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+    <script src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.free.fr</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths selected">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu" style="line-height: 170%">
+        <h1>PARITÉ D'UNE FONCTION ET ALLURE DE SA COURBE :</h1>
+        <hr>
+        <h2>1) Coordonnées du symétrique d'un point par rapport à (Oy) ou O.</h2>
+        Soit f une fonction quelconque et M le point de C<sub>f</sub> d'abscisse x. &nbsp; (x appartient à D<sub>f</sub>)<br>
+        Quelle est l'ordonnée de M ? &nbsp;
+        M(x ;
+        <select style="width:4em; text-align:center; text-align-last: center">
+          <option>??</option>
+          <option>y</option>
+          <option>ax+b</option>
+          <option>f(x)</option>
+        </select>
+       )<br>
+        Quelles sont les coordonnées de M' le symétrique de M par rapport à l'axe des ordonnées ? &nbsp;
+        M'(<input type="text" style="width:3em; text-align:center"> ; <input type="text" style="width:3em; text-align:center">)<br>
+        A quelle condition M' appartient-il aussi à C<sub>f</sub> ? &nbsp;
+        <select>
+          <option>??</option>
+          <option>y = f(x)</option>
+          <option>y = f(-x)</option>
+          <option>f(x) = f(-x)</option>
+          <option>f(x) = -f(-x)</option>
+        </select>
+        <br>
+        Quelles sont les coordonnées de M'' le symétrique de M par rapport à l'origine du repère ? &nbsp;
+        M''(<input type="text" style="width:3em; text-align:center"> ; <input type="text" style="width:3em; text-align:center">)<br>
+        A quelle condition M'' appartient-il aussi à C<sub>f</sub> ? &nbsp;
+        <select>
+          <option>??</option>
+          <option>y = f(x)</option>
+          <option>y = f(-x)</option>
+          <option>f(x) = f(-x)</option>
+          <option>f(x) = -f(-x)</option>
+        </select>
+        <br>
+        <h2>2) Cas de la fonction carrée.</h2>
+        f est maintenant la fonction carrée.<br>
+        Pour tout x de IR, f(x) = x<sup>2</sup> donc f(-x) = (-x)<sup>2</sup> = x<sup>2</sup> = f(x)<br>
+        Donc les points de C<sub>f</sub> d'abscisses opposées x et -x ont tous les deux la même ordonnée.<br>
+        Ces deux points sont donc symétriques par rapport à &nbsp;
+        <select size="1">
+          <option>??</option>
+          <option>l'axe des abscisses</option>
+          <option>l'axe des ordonnées</option>
+          <option>l'origine du repère</option>
+          <option>ils ne sont pas toujours symétriques</option>
+        </select>
+        <br>
+        Ceci étant vrai «&nbsp;pour tout x de IR&nbsp;», la courbe C<sub>f</sub> est donc symétrique par rapport à &nbsp;
+        <select name="s22" size="1">
+          <option>??</option>
+          <option>l'axe des abscisses</option>
+          <option>l'axe des ordonnées</option>
+          <option>l'origine du repère</option>
+          <option>elle n'est pas toujours symétrique</option>
+        </select>
+        <br>
+        <div id="fig1" class="jxgbox" style="width:600px; height:500px;"> </div>
+        <script>
+          tracer1()
+
+          function tracer1() {
+            var fig = JXG.JSXGraph.initBoard('fig1', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            fig.defaultAxes.x.defaultTicks.setAttribute({majorHeight: 10}); // hide grid
+            fig.defaultAxes.y.defaultTicks.setAttribute({majorHeight: 10});
+            var f = fig.jc.snippet('x*x', true, 'x', true);
+            var graph = fig.create('functiongraph',[f, -5, 5], {strokeWidth:2, strokeColor:'green', highlight:false});
+            var O = fig.create('point', [0, 0], {name:'O', visible:false});
+            var X = fig.create('glider', [1, 0, fig.defaultAxes.x], {name:'x', color:'red', label: {color: 'red', fontSize: 16, highlight:false}});
+            var OX = fig.create('arrow', [O, X], {color:'red', strokeWidth:2.5, highlight:false});
+            var X1 = fig.create('mirrorpoint', [X, O], {name:'-x', size:0, label: {color: 'tomato', fontSize: 16, highlight:false}});
+            var OX1 = fig.create('arrow', [O, X1], {color:'tomato', strokeWidth:2.5, highlight:false});
+            var Y = fig.create('point', [0, function () {return f(X.X())}], {name:'f(x)', size:0, label: {color: 'blue', fontSize: 16, highlight:false}});
+            var OY = fig.create('arrow', [O, Y], {color:'blue', strokeWidth:2.5, highlight:false});
+            var Y1 = fig.create('mirrorpoint', [Y, O], {name:'-f(x)', size:0, label: {color: 'lightblue', fontSize: 16, highlight:false}});
+            var OY1 = fig.create('arrow', [O, Y1], {color:'lightblue', strokeWidth:2.5, highlight:false});
+            var M = fig.create('point', [function () {return X.X();}, function () {return Y.Y();}], {name:'M', size:2, color:'grey', highlight:false});
+            var M1 = fig.create('reflection', [M, fig.defaultAxes.y], {name:"M'", size:2, color: 'grey', highlight:false})
+            var M2 = fig.create('mirrorpoint', [M, O], {name:"M''", size:2, color: 'grey', highlight:false});
+            var XM = fig.create('segment', [X, M], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var MM1 = fig.create('segment', [M, M1], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var M1M2 = fig.create('segment', [M1, M2], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var M2Y1 = fig.create('segment', [M2, Y1], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+          }
+        </script>
+        <h2>3) Cas de la fonction cube</h2>
+        f est maintenant la fonction cube.<br>
+        Pour tout x de IR, f(x) = x<sup>3</sup> donc f(-x) = (-x)<sup>3</sup> = -x<sup>3</sup> = -f(x)<br>
+        Donc les points de C<sub>f</sub> d'abscisses opposées x et -x ont aussi des ordonnées opposées.<br>
+        Ces deux points sont donc symétriques par rapport à &nbsp;
+        <select size="1">
+          <option>??</option>
+          <option>l'axe des abscisses</option>
+          <option>l'axe des ordonnées</option>
+          <option>l'origine du repère</option>
+          <option>ils ne sont pas toujours symétriques</option>
+        </select>
+        <br>
+        Ceci étant vrai «&nbsp;pour tout x de IR&nbsp;», la courbe C<sub>f</sub> est donc symétrique par rapport à &nbsp;
+        <select size="1">
+          <option>??</option>
+          <option>l'axe des abscisses</option>
+          <option>l'axe des ordonnées</option>
+          <option>l'origine du repère</option>
+          <option>elle n'est pas toujours symétrique</option>
+        </select>
+        <br>
+        <div id="fig2" class="jxgbox" style="width:600px; height:500px;"> </div>
+        <script>
+          tracer2()
+
+          function tracer2() {
+            var fig = JXG.JSXGraph.initBoard('fig2', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            fig.defaultAxes.x.defaultTicks.setAttribute({majorHeight: 10}); // hide grid
+            fig.defaultAxes.y.defaultTicks.setAttribute({majorHeight: 10});
+            var f = fig.jc.snippet('x^3', true, 'x', true);
+            var graph = fig.create('functiongraph',[f, -5, 5], {strokeWidth:2, strokeColor:'green', highlight:false});
+            var O = fig.create('point', [0, 0], {name:'O', visible:false});
+            var X = fig.create('glider', [1, 0, fig.defaultAxes.x], {name:'x', color:'red', label: {color: 'red', fontSize: 16, highlight:false}});
+            var OX = fig.create('arrow', [O, X], {color:'red', strokeWidth:2.5, highlight:false});
+            var X1 = fig.create('mirrorpoint', [X, O], {name:'-x', size:0, label: {color: 'tomato', fontSize: 16, highlight:false}});
+            var OX1 = fig.create('arrow', [O, X1], {color:'tomato', strokeWidth:2.5, highlight:false});
+            var Y = fig.create('point', [0, function () {return f(X.X())}], {name:'f(x)', size:0, label: {color: 'blue', fontSize: 16, highlight:false}});
+            var OY = fig.create('arrow', [O, Y], {color:'blue', strokeWidth:2.5, highlight:false});
+            var Y1 = fig.create('mirrorpoint', [Y, O], {name:'-f(x)', size:0, label: {color: 'lightblue', fontSize: 16, highlight:false}});
+            var OY1 = fig.create('arrow', [O, Y1], {color:'lightblue', strokeWidth:2.5, highlight:false});
+            var M = fig.create('point', [function () {return X.X();}, function () {return Y.Y();}], {name:'M', size:2, color:'grey', highlight:false});
+            var M1 = fig.create('reflection', [M, fig.defaultAxes.y], {name:"M'", size:2, color: 'grey', highlight:false})
+            var M2 = fig.create('mirrorpoint', [M, O], {name:"M''", size:2, color: 'grey', highlight:false});
+            var XM = fig.create('segment', [X, M], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var MM1 = fig.create('segment', [M, M1], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var M1M2 = fig.create('segment', [M1, M2], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var M2Y1 = fig.create('segment', [M2, Y1], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+          }
+        </script>
+        <h2>3) Avec la fonction de votre choix.</h2>
+        f est maintenant la fonction définie par f(x) = <input type="text" id="input" value="x" onchange="tracer3()"><br>
+        La courbe C<sub>f</sub> est-elle symétrique par rapport à l'axe des ordonnées ou à l'origine du repère ?<br>
+        <div id="fig3" class="jxgbox" style="width:600px; height:500px"> </div>
+        <script>
+          tracer3()
+
+          function tracer3() {
+            var fig = JXG.JSXGraph.initBoard('fig3', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            fig.defaultAxes.x.defaultTicks.setAttribute({majorHeight: 10}); // hide grid
+            fig.defaultAxes.y.defaultTicks.setAttribute({majorHeight: 10});
+            var txtfonction = document.getElementById('input').value;
+            var f = fig.jc.snippet(txtfonction, true, 'x', true);
+            var graph = fig.create('functiongraph',[f, -5, 5], {strokeWidth:2, strokeColor:'green', highlight:false});
+            var O = fig.create('point', [0, 0], {name:'O', visible:false});
+            var X = fig.create('glider', [1, 0, fig.defaultAxes.x], {name:'x', color:'red', label: {color: 'red', fontSize: 16, highlight:false}});
+            var OX = fig.create('arrow', [O, X], {color:'red', strokeWidth:2.5, highlight:false});
+            var X1 = fig.create('mirrorpoint', [X, O], {name:'-x', size:0, label: {color: 'tomato', fontSize: 16, highlight:false}});
+            var OX1 = fig.create('arrow', [O, X1], {color:'tomato', strokeWidth:2.5, highlight:false});
+            var Y = fig.create('point', [0, function () {return f(X.X())}], {name:'f(x)', size:0, label: {color: 'blue', fontSize: 16, highlight:false}});
+            var OY = fig.create('arrow', [O, Y], {color:'blue', strokeWidth:2.5, highlight:false});
+            var Y1 = fig.create('mirrorpoint', [Y, O], {name:'-f(x)', size:0, label: {color: 'lightblue', fontSize: 16, highlight:false}});
+            var OY1 = fig.create('arrow', [O, Y1], {color:'lightblue', strokeWidth:2.5, highlight:false});
+            var M = fig.create('point', [function () {return X.X();}, function () {return Y.Y();}], {name:'M', size:2, color:'grey', highlight:false});
+            var M1 = fig.create('reflection', [M, fig.defaultAxes.y], {name:"M'", size:2, color: 'grey', highlight:false})
+            var M2 = fig.create('mirrorpoint', [M, O], {name:"M''", size:2, color: 'grey', highlight:false});
+            var XM = fig.create('segment', [X, M], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var MM1 = fig.create('segment', [M, M1], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var M1M2 = fig.create('segment', [M1, M2], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+            var M2Y1 = fig.create('segment', [M2, Y1], {color:'grey', dash:2, strokeWidth:2, highlight:false});
+          }
+        </script>
+        <br>
+      </div>
+    </div>
+  </body>
+</html>
