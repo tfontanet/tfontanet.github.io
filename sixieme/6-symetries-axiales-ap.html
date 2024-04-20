@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Image d'une figure par une symétrie axiale</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.github.io</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths selected">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1>Image d'une figure par une symétrie axiale</h1>
+        <hr>
+        Dans la figure ci-dessous, déplacer les points <span style="color: red">rouges</span> et observer l'effet sur la figure symétrique.
+        <br><br>
+        <div id="fig" class="jxgbox" style="width:800px; height:500px; margin: 0 auto;"></div>
+        <script>
+          var fig = JXG.JSXGraph.initBoard('fig', {boundingbox: [-8, 5, 8, -5], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          
+          // Polygone de départ
+          var A = fig.create('point', [-4, 2], {name:'A', strokeColor:'red', fillColor:'red'});
+          var B = fig.create('point', [-3, 2], {name:'B', strokeColor:'red', fillColor:'red'});
+          var C = fig.create('point', [-2, 1], {name:'C', strokeColor:'red', fillColor:'red'});
+          var D = fig.create('point', [-3, -1], {name:'D', strokeColor:'red', fillColor:'red'});
+          var E = fig.create('point', [-6, -2], {name:'E', strokeColor:'red', fillColor:'red'});
+          var poly1 = fig.create('polygon', [A, B, C, D, E], {fillColor:'grey', highlightFillColor:'grey', fillOpacity: 0.3, borders: {strokeWidth:3, strokeColor:'DarkGrey'}});
+          
+          // Axe de symétrie d
+          var D1 = fig.create('point', [0,3], {name:'', strokeColor:'red', fillColor:'red'});
+          var D2 = fig.create('point', [0,-3], {name:'', strokeColor:'red', fillColor:'red'});
+          var d = fig.create('line', [D1,D2], {strokeColor:'blue', strokeWidth:2});
+          
+          // Polygone symétrique
+          var symd = fig.create('transform', [d], {type:'reflect'});
+          var A1 = fig.create('point', [A,symd], {name:"A'", strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var B1 = fig.create('point', [B,symd], {name:"B'", strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var C1 = fig.create('point', [C,symd], {name:"C'", strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var D1 = fig.create('point', [D,symd], {name:"D'", strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var E1 = fig.create('point', [E,symd], {name:"E'", strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var poly1 = fig.create('polygon', [A1, B1, C1, D1, E1], {fillColor:'grey', highlightFillColor:'grey', fillOpacity: 0.3, borders: {strokeWidth:3, strokeColor:'DarkGrey'}});
+
+          fig.update();
+        </script>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>

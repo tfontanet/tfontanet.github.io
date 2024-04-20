@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Propriétés des quadrilatères</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.github.io</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths selected">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1>Propriétés des quadrilatères</h1>
+        <hr>
+        Dans chacune des trois figures ci-dessous, déplacer les sommets <span style="color: red">rouges</span> et en déduire les propriétés du quadrilatère.
+        <br><br>
+        <h2 style="width:500px; margin: 0 auto;">Losange</h2>
+        <div id="fig1" class="jxgbox" style="width:500px; height:300px; margin: 0 auto;"></div>
+        <script>
+          var fig1 = JXG.JSXGraph.initBoard('fig1', {boundingbox: [-5, 3, 5, -3], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          
+          // Losange
+          var A = fig1.create('point', [-2.4, -1.6], {name:'A', strokeColor:'red', fillColor:'red'});
+          var B = fig1.create('point', [0.5, -1], {name:'B', strokeColor:'red', fillColor:'red'});
+          var cercle = fig1.create('circle', [A, B], {visible: false});
+          var C = fig1.create('glider', [-0.9, 0.94, cercle], {name:'C', strokeColor:'red', fillColor:'red'});
+          var D = fig1.create('parallelpoint', [A, B, C], {name:'D', strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var losange = fig1.create('polygon', [A, B, D, C], {fillColor:'grey', highlightFillColor:'grey', fillOpacity: 0.3, borders: {strokeWidth:3, strokeColor:'DarkGrey'}});
+          var AD = fig1.create('segment', [A, D], {strokeColor:'DarkGrey', strokeWidth:1, dash:2});
+          var BC = fig1.create('segment', [B, C], {strokeColor:'DarkGrey', strokeWidth:1, dash:2});
+
+          fig1.update();
+        </script>
+        <br>
+        <h2 style="width:500px; margin: 0 auto;">Rectangle</h2>
+        <div id="fig2" class="jxgbox" style="width:500px; height:300px; margin: 0 auto;"></div>
+        <script>
+          var fig2 = JXG.JSXGraph.initBoard('fig2', {boundingbox: [-5, 3, 5, -3], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          
+          // Rectangle
+          var A = fig2.create('point', [-2.4, -1.6], {name:'A', strokeColor:'red', fillColor:'red'});
+          var B = fig2.create('point', [2.2, -1], {name:'B', strokeColor:'red', fillColor:'red'});
+          var AB = fig2.create('segment', [A, B], {visible: false});
+          var perpendiculaire = fig2.create('perpendicular', [AB, B], {visible: false});
+          var C = fig2.create('glider', [1.9, 1.3, perpendiculaire], {name:'C', strokeColor:'red', fillColor:'red'});
+          var D = fig2.create('parallelpoint', [B, A, C], {name:'D', strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var rectangle = fig2.create('polygon', [A, B, C, D], {fillColor:'grey', highlightFillColor:'grey', fillOpacity: 0.3, borders: {strokeWidth:3, strokeColor:'DarkGrey'}});
+          var AC = fig2.create('segment', [A, C], {strokeColor:'DarkGrey', strokeWidth:1, dash:2});
+          var BD = fig2.create('segment', [B, D], {strokeColor:'DarkGrey', strokeWidth:1, dash:2});
+
+          fig2.update();
+        </script>
+        <br>
+        <h2 style="width:500px; margin: 0 auto;">Carré</h2>
+        <div id="fig3" class="jxgbox" style="width:500px; height:300px; margin: 0 auto;"></div>
+        <script>
+          var fig3 = JXG.JSXGraph.initBoard('fig3', {boundingbox: [-5, 3, 5, -3], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          
+          // Carré
+          var A = fig3.create('point', [-2, -1.5], {name:'A', strokeColor:'red', fillColor:'red'});
+          var B = fig3.create('point', [1.25, -2], {name:'B', strokeColor:'red', fillColor:'red'});
+          var rotation1 = fig3.create('transform', [-Math.PI/2, B], {type:'rotate'});
+          var C = fig3.create('point', [A, rotation1], {name:'C', strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var rotation2 = fig3.create('transform', [Math.PI/2, A], {type:'rotate'});
+          var D = fig3.create('point', [B, rotation2], {name:'D', strokeColor:'DarkGrey', fillColor:'DarkGrey'});
+          var carre = fig3.create('polygon', [A, B, C, D], {fillColor:'grey', highlightFillColor:'grey', fillOpacity: 0.3, borders: {strokeWidth:3, strokeColor:'DarkGrey'}});
+          var AC = fig3.create('segment', [A, C], {strokeColor:'DarkGrey', strokeWidth:1, dash:2});
+          var BD = fig3.create('segment', [B, D], {strokeColor:'DarkGrey', strokeWidth:1, dash:2});
+
+          fig3.update();
+        </script>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>
