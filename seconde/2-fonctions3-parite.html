@@ -92,6 +92,7 @@
 
           function tracer1() {
             var fig = JXG.JSXGraph.initBoard('fig1', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            fig.renderer.container.style.backgroundColor = '#f8f8f8';
             fig.defaultAxes.x.defaultTicks.setAttribute({majorHeight: 10}); // hide grid
             fig.defaultAxes.y.defaultTicks.setAttribute({majorHeight: 10});
             var f = fig.jc.snippet('x*x', true, 'x', true);
@@ -142,6 +143,7 @@
 
           function tracer2() {
             var fig = JXG.JSXGraph.initBoard('fig2', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            fig.renderer.container.style.backgroundColor = '#f8f8f8';
             fig.defaultAxes.x.defaultTicks.setAttribute({majorHeight: 10}); // hide grid
             fig.defaultAxes.y.defaultTicks.setAttribute({majorHeight: 10});
             var f = fig.jc.snippet('x^3', true, 'x', true);
@@ -173,6 +175,7 @@
 
           function tracer3() {
             var fig = JXG.JSXGraph.initBoard('fig3', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            fig.renderer.container.style.backgroundColor = '#f8f8f8';
             fig.defaultAxes.x.defaultTicks.setAttribute({majorHeight: 10}); // hide grid
             fig.defaultAxes.y.defaultTicks.setAttribute({majorHeight: 10});
             var txtfonction = document.getElementById('input').value;

@@ -36,6 +36,7 @@
         <div id="fig" class="jxgbox" style="width:800px; height:500px; margin: 0 auto;"></div>
         <script>
           var fig = JXG.JSXGraph.initBoard('fig', {boundingbox: [-8, 5, 8, -5], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig.renderer.container.style.backgroundColor = '#f8f8f8';
           
           // Polygone de départ
           var A = fig.create('point', [-4, 2], {name:'A', strokeColor:'red', fillColor:'red'});

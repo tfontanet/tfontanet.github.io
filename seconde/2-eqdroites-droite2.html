@@ -105,6 +105,7 @@
               <div id="fig1" class="jxgbox" style="width:400px; height:300px;"></div>
               <script>
                 fig1 = JXG.JSXGraph.initBoard('fig1', {boundingbox: [-6, 5, 6, -5], axis:true, grid:true, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+                fig1.renderer.container.style.backgroundColor = '#f8f8f8';
                 var A1 = fig1.create('point', [1, function(){return p1+m1}], {visible:false});
                 var B1 = fig1.create('point', [0, function(){return p1}], {visible:false});
                 var AB1 = fig1.create('line', [A1, B1], {strokeColor:'blue'}); 
@@ -129,6 +130,7 @@
               <div id="fig2" class="jxgbox" style="width:400px; height:300px;"></div>
               <script>
                 var fig2 = JXG.JSXGraph.initBoard('fig2', {boundingbox: [-6, 5, 6, -5], axis:true, grid:true, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+                fig2.renderer.container.style.backgroundColor = '#f8f8f8';
                 A2 = fig2.create('point', [-2, 1], {name:'A', snapToGrid:true});
                 B2 = fig2.create('point', [1, -1], {name:'B', snapToGrid:true});
                 var AB2 = fig2.create('line', [A2, B2], {strokeColor:'blue'}); 

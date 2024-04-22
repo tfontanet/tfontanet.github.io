@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Image d'une figure par les différentes transformations</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.github.io</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths selected">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="https://drive.google.com/drive/folders/13QpIaGh4dyyWMFiQe9upjlKMt6MINC7E?usp=sharing" class="info">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <h1>Image d'une figure par les différentes transformations</h1>
+        <hr>
+        <ul>
+          <li>En vous appuyant sur les définitions du cours, essayez de vous représenter les images du polygône gris par les différentes transformations avant de cliquer sur les cases à cocher.</li>
+          <li>N'hésitez pas à faire bouger le point A et à observer son image par les différentes transformations.</li>
+        </ul>
+        <br><br>
+        <div id="fig" class="jxgbox" style="width:800px; height:500px; margin: 0 auto;"></div>
+        <script>
+          var fig = JXG.JSXGraph.initBoard('fig', {boundingbox: [-8, 5, 8, -5], axis:false, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+          fig.renderer.container.style.backgroundColor = '#f8f8f8';
+          
+          // poly1 est le polygone gris et fixe de départ
+          var xlist = [-6,-4,-3,-2,-3,-6]; ylist = [-2, 2, 2, 1,-1,-2];
+          var sommets_poly1 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly1[i] = fig.create('point', [xlist[i],ylist[i]], {visible:false});
+          }
+          var poly1 = fig.create('polygon', sommets_poly1, {fillColor:'grey', fillOpacity: 0.1, withLines:false});
+          
+          // A est le point qui glisse sur le contour de poly1
+          var contour_poly1 = fig.create('curve', [xlist,ylist], {strokeColor:'black', strokeWidth:2, highlight:false});
+          var A = fig.create('glider', [contour_poly1], {name:'A', strokeColor:'black', fillColor:'grey'});
+          
+          // Symétrie centrale par rapport à 0
+          var O = fig.create('point', [0,1], {name:'O', strokeColor:'red', fillColor:'red'});
+          var symO = fig.create('transform', [Math.PI,O], {type:'rotate'});
+          var A_1 = fig.create('point', [A,symO], {name:'A_1', strokeColor:'red', fillColor:'red', visible:false});
+          var AA_1 = fig.create('segment', [A,A_1], {strokeColor:'red', fillColor:'red', strokeWidth:1, dash:2, visible:false})
+          var sommets_poly2 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly2[i] = fig.create('point', [sommets_poly1[i],symO], {visible:false});
+          }
+          var poly2 = fig.create('polygon', sommets_poly2, {fillColor:'red', fillOpacity: 0.1, highlight:false, borders:{strokeColor:'red', strokeWidth:2}, visible:false});
+          var checkbox_symO = fig.create('checkbox', [-7.5, 4, 'Symétrie centrale par rapport à O']);
+          JXG.addEvent(checkbox_symO.rendNodeCheckbox, 'change', function() {A_1.setProperty({visible:this.Value()}); AA_1.setProperty({visible:this.Value()}); poly2.setProperty({visible:this.Value()});}, checkbox_symO);
+          
+          // Symétrie axiale par rapport à d
+          var D = fig.create('point', [0,-3], {name:'(d)', strokeColor:'blue', fillColor:'blue', visible:false});
+          var d = fig.create('line', [O,D], {strokeColor:'blue', strokeWidth:2, visible:false});
+          var symd = fig.create('transform', [d], {type:'reflect'});
+          var A_2 = fig.create('point', [A,symd], {name:'A_2', strokeColor:'blue', fillColor:'blue', visible:false});
+          var AA_2 = fig.create('segment', [A,A_2], {strokeColor:'blue', fillColor:'blue', strokeWidth:1, dash:2, visible:false})
+          var sommets_poly3 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly3[i] = fig.create('point', [sommets_poly1[i],symd], {visible:false});
+          }
+          var poly3 = fig.create('polygon', sommets_poly3, {fillColor:'blue', fillOpacity: 0.1, highlight:false, borders:{strokeColor:'blue', strokeWidth:2}, visible:false});
+          var checkbox_symd = fig.create('checkbox', [-7.5, 4.5, 'Symétrie axiale par rapport à (d)']);
+          JXG.addEvent(checkbox_symd.rendNodeCheckbox, 'change', function() {D.setProperty({visible:this.Value()}); d.setProperty({visible:this.Value()}); A_2.setProperty({visible:this.Value()}); AA_2.setProperty({visible:this.Value()}); poly3.setProperty({visible:this.Value()});}, checkbox_symd);
+          
+          // Translation qui transforme 0 en 0'
+          var O2 = fig.create('point', [4,-1], {name:"O'", strokeColor:'LightSalmon', fillColor:'LightSalmon', visible:false});
+          var OO2 = fig.create('arrow', [O,O2], {strokeColor:'LightSalmon', fillColor:'LightSalmon', strokeWidth:2, visible:false})
+          var translation = fig.create('transform', [function(){return O2.X()-O.X();}, function(){return O2.Y()-O.Y();}], {type:'translate'});
+          var A_3 = fig.create('point', [A,translation], {name:'A_3', strokeColor:'LightSalmon', fillColor:'LightSalmon', visible:false});
+          var AA_3 = fig.create('segment', [A,A_3], {strokeColor:'LightSalmon', fillColor:'LightSalmon', strokeWidth:1, dash:2, visible:false})
+          var sommets_poly4 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly4[i] = fig.create('point', [sommets_poly1[i],translation], {visible:false});
+          }
+          var poly4 = fig.create('polygon', sommets_poly4, {fillColor:'LightSalmon', fillOpacity: 0.1, highlight:false, borders:{strokeColor:'LightSalmon', strokeWidth:2}, visible:false});
+          var checkbox_translation = fig.create('checkbox', [-7.5, 3.5, "Translation qui transforme O en O'"]);
+          JXG.addEvent(checkbox_translation.rendNodeCheckbox, 'change', function() {O2.setProperty({visible:this.Value()}); OO2.setProperty({visible:this.Value()}); A_3.setProperty({visible:this.Value()}); AA_3.setProperty({visible:this.Value()}); poly4.setProperty({visible:this.Value()});}, checkbox_translation);
+
+          // Rotation de centre 0 et d'angle alpha dans le sens anti-horaire'
+          var adroite = fig.create('transform', [2, 0], {type:'translate'});
+          var O3 = fig.create('point', [O, adroite], {visible:false});
+          var OO3 = fig.create('segment', [O,O3], {strokeColor:'brown', fillColor:'brown', strokeWidth:2, visible:false});
+          var cercle = fig.create('circle', [O, 2], {visible:false});
+          var O4 = fig.create('glider', [0, 3, cercle], {name:'', strokeColor:'brown', fillColor:'brown', visible:false});
+          var OO4 = fig.create('segment', [O,O4], {strokeColor:'brown', fillColor:'brown', strokeWidth:2, visible:false});
+          var angle = fig.create('angle', [O3, O, O4], {visible:false});
+          var rotation = fig.create('transform', [function() {return angle.Value();}, O], {type:'rotate'});
+          var A_4 = fig.create('point', [A,rotation], {name:'A_3', strokeColor:'brown', fillColor:'brown', visible:false});
+          var OA = fig.create('segment', [O,A], {strokeColor:'brown', fillColor:'brown', strokeWidth:1, dash:2, visible:false})
+          var OA_4 = fig.create('segment', [O,A_4], {strokeColor:'brown', fillColor:'brown', strokeWidth:1, dash:2, visible:false})
+          var sommets_poly5 = [];
+          for (var i = 0; i < 5; i++) {
+            sommets_poly5[i] = fig.create('point', [sommets_poly1[i],rotation], {visible:false});
+          }
+          var poly5 = fig.create('polygon', sommets_poly5, {fillColor:'brown', fillOpacity: 0.1, highlight:false, borders:{strokeColor:'brown', strokeWidth:2}, visible:false});
+          var checkbox_rotation = fig.create('checkbox', [-7.5, 3, "Rotation de centre O et d'angle α dans le sens anti-horaire"]);
+          JXG.addEvent(checkbox_rotation.rendNodeCheckbox, 'change', function() {OO3.setProperty({visible:this.Value()}); O4.setProperty({visible:this.Value()}); OO4.setProperty({visible:this.Value()}); angle.setProperty({visible:this.Value()}); A_4.setProperty({visible:this.Value()}); OA.setProperty({visible:this.Value()}); OA_4.setProperty({visible:this.Value()}); poly5.setProperty({visible:this.Value()});}, checkbox_rotation);
+          
+          fig.update();
+        </script>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>

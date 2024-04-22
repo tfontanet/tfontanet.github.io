@@ -48,6 +48,7 @@
             JXG.Options.axis.ticks.insertTicks = false;
             JXG.Options.axis.ticks.ticksDistance = 1;
             var fig = JXG.JSXGraph.initBoard('fig', {boundingbox: [-8, 5, 8, -5], axis:true, grid:true, showCopyright:false, showNavigation:false, zoom:false, pan:false});
+            fig.renderer.container.style.backgroundColor = '#f8f8f8';
             var axe_Oy = fig.create('line', [[0, 0], [0, 1]], {visible:false});
             var B = fig.create('glider', [0, 1, axe_Oy], {name:'B', strokeColor:'blue', fillColor:'blue', snapSizeY:0.1, snapToGrid:true});
             var OB = fig.create('segment', [[0, 0], B], {strokeColor:'blue'});

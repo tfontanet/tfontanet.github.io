@@ -82,6 +82,7 @@
 
           function tracer() {
             var fig = JXG.JSXGraph.initBoard('fig', {boundingbox: [-5, 5, 5, -5], axis:true, grid:true, showCopyright:false, showNavigation:false, pan:{enabled:false}});
+            fig.renderer.container.style.backgroundColor = '#f8f8f8';
             var txtfonction = document.getElementById('input').value;
             var f = fig.jc.snippet(txtfonction, true, 'x', true);
             var graph = fig.create('functiongraph',[f, -5, 5], {strokeWidth:2, strokeColor:'black', highlightStrokeColor:'black'});
