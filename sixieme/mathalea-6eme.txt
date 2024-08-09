@@ -1,0 +1,52 @@
+Vocabulaire et notations en géométrie
+https://coopmaths.fr/alea/?uuid=d81c6&id=6G10-1&n=4&d=10&alea=uLd2&i=1&cd=1&uuid=83763&id=6G10-3&n=4&d=10&alea=GwtT&i=1&cd=1&uuid=9af23&id=6G10-6&n=2&d=10&s=3&s2=4&alea=Ti0c&i=1&cd=1&v=eleve&es=0110001&title=
+
+Entiers et décimaux - Numération, orthographe
+https://coopmaths.fr/alea/?uuid=34579&id=6N10-3&n=4&d=10&s=1&s2=3&i=1&cd=1&uuid=7efdf&id=6N10-1&n=4&d=10&s=false&s2=true&s3=3&s4=1&i=1&cd=1&uuid=6ea89&id=6N10-2&n=4&d=10&s=7&i=1&cd=1&uuid=dc348&id=6N10-4&n=4&d=10&i=1&cd=1&uuid=6babf&id=6N10-0&n=5&d=10&s=3&s2=3&i=1&cd=1&uuid=5eb83&id=6N23-0&n=4&d=10&s=3&s2=2&s3=3&i=1&cd=1&v=eleve&es=0110001&title=
+Entiers et décimaux - Ecritures d'un nombre
+https://coopmaths.fr/alea/?uuid=4b9d5&id=6N23&n=4&d=10&alea=tHDQ&i=1&cd=1&uuid=708a9&id=6N23-8&n=5&d=10&s=3&alea=rgaM&i=1&cd=1&uuid=e8e24&id=6N23-4&alea=BYCJ&i=1&uuid=c5438&id=6N10-6&n=4&d=10&s=7&s2=3&alea=rMF9&i=1&cd=1&uuid=f899b&id=6N10-7&n=4&d=10&s=4&s2=7&s3=1-3-5-7-9&s4=4&alea=ksbo&i=1&cd=1&uuid=1acf7&id=6N23-1&n=4&d=10&s=1-3-4-5-6&alea=LPZD&i=1&cd=1&v=eleve&es=0110001&title=
+Entiers et décimaux - Droites graduées, comparaisons
+https://coopmaths.fr/alea/?uuid=8418e&id=6N30-1&n=3&d=10&s=7&alea=qmFE&i=1&cd=1&uuid=c1888&id=6N30&alea=Y0iO&i=1&uuid=e528e&id=6N30-2&n=4&d=10&s=4&alea=zRr3&i=1&cd=1&uuid=12773&id=6N23-2&alea=N5ki&i=1&uuid=acd4a&id=6N11&n=2&d=10&s=4&alea=MSMt&i=1&cd=1&uuid=23c48&id=6N23-3&n=2&d=10&s=3&alea=kcNN&i=1&cd=1&uuid=29b40&id=6N11-3&n=4&d=10&s=4&s2=7&s3=2&alea=0Zpi&i=1&cd=1&uuid=3bdcd&id=6N20-3&alea=ek0b&i=1&uuid=d2b82&id=6N31-6&n=4&d=10&s=1-2-3&alea=rSmC&i=1&cd=1&v=eleve&es=0110001&title=
+
+Additions et soustractions
+https://coopmaths.fr/alea/?uuid=32e02&id=6C13-1&n=5&d=10&s=1-2-3-4-5-6&alea=P3BU&i=1&cd=1&uuid=ace0a&id=6C10-4&n=4&d=10&s=20&s2=3&alea=68Fy&i=1&cd=1&uuid=cfa6a&id=6C10&n=4&d=10&s=1-2-3&s2=3&s3=false&s4=false&alea=EywS&i=1&cd=1&uuid=01873&id=6C20&n=4&d=10&s=4&s2=3&s3=3&alea=aRoB&i=1&cd=1&uuid=5f315&id=6D11&n=4&d=10&s=6&alea=k13N&i=1&cd=1&uuid=e960d&id=6D12&n=4&d=10&s=4&alea=Fn82&i=1&cd=1&v=eleve&es=0110001&title=
+
+Multiplications - Vocabulaire et calculs posés
+https://coopmaths.fr/alea/?uuid=ed0ea&id=6C13&n=5&d=10&s=4&s2=false&s3=1-2-3-3-3&alea=OigA&i=1&cd=1&uuid=32e02&id=6C13-1&n=5&d=10&s=1-2-3-4-5-6-7-8-9-7-8-9&alea=4foq&i=1&cd=1&uuid=cfa6a&id=6C10&n=3&d=10&s=4-5&s2=3&s3=false&s4=false&alea=b4nL&i=1&cd=1&uuid=52939&id=6C30&n=3&d=10&s=false&s2=3&alea=Rg6u&i=1&cd=1&uuid=96b94&id=6C32&n=2&d=10&s=true&alea=ezOz&i=1&cd=1&uuid=28d56&id=6C12&n=1&d=10&s=1-2-3-4-5-6&s2=true&s3=true&s4=3&alea=vPSO&i=1&cd=1&v=eleve&es=0110001&title=
+Multiplications - Calculs à l'aide des propriétés
+https://coopmaths.fr/alea/?uuid=625c0&id=6C30-2&n=4&d=10&s=1&alea=soY3&i=1&cd=1&uuid=a5c5a&id=6C10-3&n=5&d=10&s=6-7-8-9&alea=yc71&i=1&cd=1&uuid=2471d&id=6C30-1&n=6&d=10&s=1&s2=false&s3=true&s4=false&alea=gF7I&i=1&cd=1&uuid=47a54&id=6C30-4&alea=IjGw&i=1&uuid=021f3&id=6C30-5&n=4&d=10&s=false&s2=1-2&alea=bfSU&i=1&cd=1&uuid=18559&id=6C30-6&n=4&d=10&s=false&s2=true&s3=3&alea=pOvk&i=1&cd=1&uuid=4c10a&id=6C33&n=5&d=10&s=3&s2=false&s3=false&s4=false&alea=mBun&i=1&cd=1&uuid=9103e&id=5C12-3&alea=dLHQ&i=1&v=eleve&es=0110001&title=
+
+Tables de multiplications
+https://coopmaths.fr/alea/?uuid=0e6bd&id=6C10-1&n=10&d=10&s=6-7-8-9&s2=4&s3=false&alea=OpKt&i=1&cd=1&uuid=23bc8&id=6C10-2&n=5&d=10&s=2-3-4-5-6-7-8-9&s2=1&alea=HAfK&i=1&cd=1&uuid=a5c5a&id=6C10-3&n=5&d=10&s=2-3-4-5-6-7-8-9&alea=WkCx&cd=1&uuid=ac64a&id=6C10-9&n=5&d=10&s=3-4-5-6-7-8-9&s2=9&alea=AbHB&i=1&cd=1&v=eleve&es=0110001&title=
+
+Divisions - euclidiennes
+https://coopmaths.fr/alea/?uuid=ed0ea&id=6C13&n=5&d=10&s=4&s2=false&s3=1-2-3-4-4-4&alea=oket&i=1&cd=1&uuid=32e02&id=6C13-1&alea=KTiM&i=1&uuid=37267&id=6C11-1&n=4&d=10&s=1&alea=aRmL&i=1&cd=1&uuid=4e35d&id=6C11-2&n=4&d=10&s=0&s2=1&s3=1&s4=3&alea=Coup&i=1&cd=1&uuid=d0cd7&id=6C11-3&alea=6mOd&i=1&uuid=2da81&id=6C11&n=3&d=10&s=3&s2=false&alea=LKq7&i=1&cd=1&uuid=bbdd6&id=6N43-3&n=5&d=10&s=2&alea=aRmL&i=1&cd=1&uuid=f894a&id=6N43-4&n=5&d=10&alea=BuYv&i=1&cd=1&uuid=fa2eb&id=6N43-2&n=3&d=10&s=false&alea=f49h&i=1&cd=1&uuid=fa2eb&id=6N43-2&n=3&d=10&s=true&alea=piAy&i=1&cd=1&v=eleve&es=0110001&title=
+Divisions - Divers
+https://coopmaths.fr/alea/?uuid=85989&id=6C30-7&n=3&d=10&s=true&s2=false&alea=9kNf&i=1&cd=1&uuid=9540b&id=6C30-8&alea=HojK&i=1&uuid=bb9d8&id=6N12&n=4&d=10&s=2&s2=3&alea=Sp0O&i=1&cd=1&uuid=294bb&id=6C31&alea=2kj0&i=1&uuid=013ef&id=6C31-2&alea=mz3U&i=1&uuid=88021&id=6C12-2&alea=zHHb&i=1&uuid=103a2&id=6C12-5&alea=1zQ7&uuid=4e89b&id=6C35&n=1&d=10&s=2&s2=2&s3=3&alea=BN0i&i=1&cd=1&uuid=2b06d&id=6C33-1&n=3&d=10&s=true&s2=4&alea=Nv2U&i=1&cd=0&uuid=4c10a&id=6C33&n=4&d=10&s=3&s2=false&s3=false&s4=true&alea=zFTs&i=1&cd=1&uuid=e61fc&id=5C12&n=4&d=10&s=4&s2=false&s3=true&s4=false&alea=CVY3&i=1&cd=1&v=eleve&es=0110001&title=
+
+Angles
+https://coopmaths.fr/alea/?uuid=e8d33&id=6G22-1&n=2&d=10&s=5&alea=2jqw&i=1&cd=0&uuid=e10d1&id=6G22&n=2&d=10&s=3&s2=1&s3=false&alea=Q2V7&i=1&cd=1&uuid=fe08e&id=6G22-2&n=4&d=10&s=false&alea=dDEQ&i=1&cd=0&uuid=c7f7a&id=6G23-1&n=3&d=10&s=1&s2=false&alea=VJix&i=1&cd=1&uuid=ff2cc&id=6G23-4&n=1&d=10&s=1&s2=7&s3=4&s4=true&alea=pZTD&i=1&cd=1&uuid=329fe&id=6G23-5&n=4&d=10&s=15&alea=G2hT&cd=1&v=eleve&es=0110001&title=
+
+Fractions - Représenter une fraction
+https://coopmaths.fr/alea/?uuid=87479&id=6N14&alea=iwb8&i=1&uuid=2ba53&id=6N21&n=3&d=10&s=1&alea=eFFy&i=1&cd=1&uuid=778c0&id=6N21-1&n=3&d=10&s=1-2-3&alea=bl1H&i=1&cd=1&uuid=442f4&id=6N21-2&n=4&d=10&s=3&s2=true&s3=false&alea=Gryo&i=1&cd=1&uuid=1f5de&id=6N20-1&n=4&d=10&s=false&s2=11&s3=true&alea=Q79t&i=1&cd=0&uuid=6c8a1&id=6N20&alea=B8Lm&i=1&uuid=ab44e&id=6N20-2&n=4&d=10&s=11&s2=true&alea=FQRu&i=1&cd=1&uuid=c75b6&id=6N22&n=5&d=10&s=true&s2=5&alea=YR56&i=1&cd=0&v=eleve&es=0110001&title=
+Fractions - Calculer
+https://coopmaths.fr/alea/?uuid=4d0dd&id=6N23-5&alea=piQs&i=1&uuid=d5e44&id=6N23-6&alea=8Vbq&i=1&uuid=ddb83&id=6N33&n=4&d=10&s=true&s2=true&alea=XKSA&i=1&cd=1&uuid=a168c&id=6N33-0&n=5&d=10&s=5&s2=true&alea=BYB1&i=1&cd=1&uuid=6a17f&id=6N22-2&alea=T8fw&i=1&uuid=06633&id=6N41&n=4&d=10&s=11&s2=3&alea=UcX7&i=1&cd=1&uuid=64422&id=6C23&n=4&d=10&s=4&alea=a8gL&i=1&cd=1&uuid=64422&id=6C23&n=4&d=10&s=3&alea=txjr&i=1&cd=1&v=eleve&es=0110001&title=
+
+Symétries axiales
+https://coopmaths.fr/alea/?uuid=e9d29&id=6G24&n=1&d=10&s=1-2-3-4&alea=ck4F&i=1&cd=1&uuid=f5569&id=6G25-2&n=1&d=10&s2=8&alea=DJ8Q&i=1&cd=1&uuid=49cb2&id=6G25-1&n=3&d=10&s=true&alea=4xZC&i=1&cd=1&uuid=26ea4&id=6G24-0&n=2&d=10&s=5&s2=1&s3=3&alea=PmOa&i=1&cd=1&uuid=328b1&id=6G25-3&n=4&d=10&s=1&s2=false&s3=8&alea=WRps&i=1&cd=1&uuid=65bd7&id=6G32&alea=k60g&uuid=cd69a&id=6G32-1&n=1&d=10&s=5&s2=true&s3=4&alea=2SIa&cd=1&v=eleve&es=0110001&title=
+
+Proportionnalité - Généralités
+https://coopmaths.fr/alea/?uuid=850d5&id=6P10&n=4&d=10&s=6&s2=true&alea=yVmg&i=1&cd=1&uuid=2d5eb&id=6P15&n=3&d=10&s=1&alea=71Xz&i=1&cd=1&uuid=709b6&id=can4P03&n=4&d=10&alea=zVDM&i=1&cd=1&uuid=f7a14&id=6P11&n=4&d=10&s=true&s2=7&alea=oh3U&i=1&cd=1&uuid=c511f&id=6P11-1&n=2&d=10&alea=dlL5&i=1&cd=1&uuid=65288&id=6P11-2&n=4&d=10&s=4&s2=false&s3=false&alea=SDcl&i=1&cd=1&uuid=b0f4e&id=6P12&n=4&d=10&s=true&s2=7&alea=h9PK&i=1&cd=1&v=eleve&es=0110001&title=
+Proportionnalité - Pourcentages et échelles
+https://coopmaths.fr/alea/?uuid=66756&id=6N33-1&n=4&d=10&s=1&s2=false&s3=10&alea=5VWZ&i=1&cd=1&uuid=0e58f&id=5N11-3&n=4&d=10&s=1&alea=oAjQ&i=1&cd=1&uuid=db772&id=6N33-2&n=3&d=10&alea=b5nr&i=1&cd=1&uuid=064ce&id=6P13&n=2&d=10&s=2&s2=true&alea=1oO1&i=1&cd=1&uuid=d67e9&id=6N33-3&n=3&d=10&alea=j6zw&i=1&cd=1&uuid=4db23&id=5P14&n=3&d=10&s=2&alea=AkeP&i=1&cd=1&uuid=9c78f&id=6P12-1&n=3&d=10&s=4&s2=true&alea=XW1i&i=1&cd=1&v=eleve&es=0110001&title=
+
+Périmètres et aires - Faciles
+https://coopmaths.fr/alea/?uuid=5563e&id=6M11-3&alea=shuX&i=1&uuid=83be1&id=6M10&n=3&d=10&s=1-2-3&s2=false&s3=true&s4=false&alea=QBtC&i=1&cd=1&uuid=d1513&id=6M11-1&alea=9mrD&i=1&uuid=95313&id=6M21&n=2&d=10&s=13&s2=3&alea=rvmZ&i=1&cd=1&uuid=f9a02&id=6M22-1&n=3&d=10&s=3&s2=true&s3=4&s4=3&alea=CK60&i=1&cd=1&uuid=3cb1d&id=6M12&n=5&d=10&s=4&s2=false&s3=false&alea=vSVj&i=1&cd=1&v=eleve&es=0110001&title=
+Périmètres et aires - Moins faciles
+https://coopmaths.fr/alea/?uuid=06b1a&id=6M20&n=4&d=10&s=3&alea=o7zI&i=1&cd=0&uuid=ac571&id=6M22&alea=tDa9&i=1&uuid=5999f&id=6M11-2&n=2&d=10&s=7&s2=true&s3=2&s4=3&alea=DqZX&i=1&cd=1&uuid=ff386&id=6M22-2&alea=8YFA&i=1&uuid=9a5fe&id=6M10-1&n=1&d=10&s=5&s2=1&s3=true&s4=1&alea=UTMn&i=1&cd=1&uuid=6225c&id=6M23&n=5&d=10&s=6&s2=false&s3=2&s4=false&alea=Fr8Y&i=1&cd=1&v=eleve&es=0110001&title=
+
+Parallélépipèdes rectangles et volumes
+https://coopmaths.fr/alea/?uuid=b36df&id=6G42&n=2&d=10&s=3&s2=1&s3=5&alea=wU1s&cd=1&uuid=6809f&id=6G42-1&n=2&d=10&s=3&s2=7&s3=1&s4=6&alea=zMxL&cd=1&uuid=5f115&id=6G43&n=3&d=10&s=1&s2=3&alea=Vjzk&cd=1&uuid=da6a4&id=6G44&alea=7e4B&?uuid=04b0d&id=6M30&n=4&d=10&s=2&s2=false&s3=2&s4=3&alea=k3D8&i=1&cd=1&uuid=0d4be&id=6M30-0&n=3&d=10&alea=RHfP&i=1&cd=0&uuid=33ac2&id=6M31&n=5&d=10&s=5&s2=false&s3=2&alea=c0ul&i=1&cd=1&uuid=f4d29&id=6M31-2&n=5&d=10&s=3&s2=false&s3=4&s4=2&alea=a6hs&i=1&cd=1&v=eleve&es=0110001&title=
+
+Organisation des données
+https://coopmaths.fr/alea/?uuid=adac4&id=6S10-1&n=3&d=10&s=3&s2=5&alea=OV3E&cd=1&uuid=17bce&id=6S10&n=1&d=10&s=3&s2=1&alea=6LM5&cd=1&v=eleve&es=0110001&title=
