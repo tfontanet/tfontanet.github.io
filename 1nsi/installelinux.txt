@@ -40,6 +40,9 @@ echo [debugger] >> ".config/Thonny/configuration.ini"
 echo frames_in_separate_windows = False >> ".config/Thonny/configuration.ini"
 echo preferred_debugger = faster >> ".config/Thonny/configuration.ini"
 
+# Telecharger et Installer la librairie SDL2 pour que le module pyxel puisse fonctionner
+sudo apt install -y libsdl2-dev
+
 # Installer Geany
 sudo apt install -y geany
 
