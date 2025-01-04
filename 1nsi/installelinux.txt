@@ -22,9 +22,9 @@ mkdir ~/Gameshell
 mv gameshell.sh ~/Gameshell
 
 # Telecharger et Installer Thonny
-wget https://github.com/thonny/thonny/releases/download/v4.1.4/thonny-4.1.4.bash
-yes "" | bash ./thonny-4.1.4.bash
-rm -f ./thonny-4.1.4.bash
+wget https://thonny.org/installer-for-linux
+yes "" | bash ./installer-for-linux
+rm -f ./installer-for-linux
 
 mkdir -p ".config/Thonny/"
 echo [general] > ".config/Thonny/configuration.ini"
@@ -50,9 +50,9 @@ echo msgwindow_visible=false >> ".config/geany/geany.conf"
 
 # Telecharger et Installer Filius
 sudo apt install -y default-jdk
-wget https://www.lernsoftware-filius.de/downloads/Setup/filius_2.6.1_all.deb
-sudo apt install -y ./filius_2.6.1_all.deb
-rm -f ./filius_2.6.1_all.deb
+wget https://www.lernsoftware-filius.de/downloads/Setup/filius_2.7.1_all.deb
+sudo apt install -y ./filius_2.7.1_all.deb
+rm -f ./filius_2.7.1_all.deb
 
 # Installer HTTPie
 sudo apt install -y httpie
