@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Tale NSI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../head.js"></script>
+  </head>
+  <body>
+    <div id="marges">
+      <a id="top"> </a>
+      <!-- Bandeau supérieur -->
+      <div id="bandeau">
+        <img src="../bandeau-maths.gif" width="108" height="52" alt="">
+        <span id="tfontanet">tfontanet.github.io</span>
+        <br><br>
+        <div id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="../sixieme/index.html" class="maths">Sixième</a>
+          <a href="../cinquieme/index.html" class="maths">Cinquième</a>
+          <a href="../quatrieme/index.html" class="maths">Quatrième</a>
+          <a href="../seconde/index.html" class="maths">Seconde</a>
+          <a href="../1nsi/index.html" class="info">1ère NSI</a>
+          <a href="../tnsi/index.html" class="info selected">Tale NSI</a>
+        </div>
+      </div>
+      <!-- Début de la page -->
+      <div id="contenu">
+        <div id="debutpage">
+          <div id="debutpageimg">
+            <img src="hanoi.jpg" width="208" height="175" alt="Terminale NSI">
+          </div>
+          <div id="debutpagecontenu">
+            <p><a href="tnsi-progression-annee.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Progression d'année</a> &nbsp;&nbsp;(<a href="tnsi-progression-annee.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+            <p><a href="tnsi-travailler-efficacement.html"><img src="../html.gif" alt="Html"> Travailler efficacement en NSI</a></p>
+            <p><img src="../html.gif" alt="Html"> Catalogue de <a href="https://bessonnetnathalie.forge.apps.education.fr/ressources-nsi/" Title="Lien extérieur"> Ressources NSI <img src="../lien-externe.png" alt=""></a></p>
+            <p><img src="../html.gif" alt="Html"> Annales du Bac : <a href="https://raisintine.fr/chocolatine/cours.php?titre=T-bac-ecrit" Title="Lien extérieur">Epreuve écrite <img src="../lien-externe.png" alt=""></a> - <a href="https://raisintine.fr/chocolatine/cours.php?titre=T-bac-pratique" Title="Lien extérieur">Epreuve pratique <img src="../lien-externe.png" alt=""></a></p>
+            <p><img src="../html.gif" alt="Html"> Exercices Python à faire avec <a href="https://codex.forge.apps.education.fr/" Title="Lien extérieur">CodEx <img src="../lien-externe.png" alt=""></a></p>
+            <p><a href="https://1drv.ms/o/c/fab0bf4690728431/EuutVJfgycdLga7p_u-TgJ8BXTHKDwm8pc0KGEly5Eo8Kg?e=9bSGt5" Title="Lien extérieur"><img src="../html.gif" alt="Html"> Exercices corrigés récemment <img src="../lien-externe.png" alt=""></a></p>
+          </div>
+        </div>
+        <!-- Début des chapitres -->
+        <br><br>
+        <fieldset><legend>Récursivité</legend>
+          <p><img src="../jupyter.gif" alt="Ipynb"> Activité d'introduction : <a href="https://notebook.basthon.fr/?from=https://tfontanet.github.io/tnsi/tnsi-recursivite-intro-turtle.ipynb">Figures récursives</a> avec turtle</p>
+          <p><a href="https://notebook.basthon.fr/?from=https://tfontanet.github.io/tnsi/tnsi-recursivite.ipynb"><img src="../jupyter.gif" alt="Ipynb"> Exercices</a></p>
+          <p><a href="https://spe-lavoisier.fr/TNSI/TP/Chapitre4.php#default" Title="Lien extérieur"><img src="../html.gif" alt="Html"> Autres figures récursives <img src="../lien-externe.png" alt=""></a> par Pascal Hassenforder</p>
+          <p><img src="../html.gif" alt="Html"> Tracer l'arbre des appels récursifs avec rcviz sur <a href="https://notebook.basthon.fr/?from=examples/python3-rcviz.ipynb" Title="Lien extérieur">Basthon <img src="../lien-externe.png" alt=""></a> ou sur <a href="https://www.recursionvisualizer.com/" Title="Lien extérieur">Recursion Visualizer <img src="../lien-externe.png" alt=""></a></p>
+          <p><img src="../html.gif" alt="Html"> TP : Les tours de Hanoi : <a href="http://championmath.free.fr/tourhanoi.htm" Title="Lien extérieur">Jouer <img src="../lien-externe.png" alt=""></a>, puis <a href="https://www.levavasseur.xyz/NSI_T/recursif/tours_hanoi.pdf" Title="Lien extérieur">Programmer <img src="../lien-externe.png" alt=""></a>, puis <a href="tnsi-recursivite-hanoi.py" Title="Lien extérieur">Visualiser</a> avec tkinter</p>
+          <p><a href="tnsi-recursivite-cours.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Synthèse de cours</a> &nbsp;&nbsp;(<a href="tnsi-recursivite-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+        </fieldset>
+        <fieldset><legend>Programmation Orientée Objet</legend>
+          <p><a href="https://glassus.github.io/terminale_nsi/T2_Programmation/2.1_Programmation_Orientee_Objet/cours/" Title="Lien extérieur"><img src="../html.gif" alt="Html"> Introduction <img src="../lien-externe.png" alt=""></a> par Gilles Lassus</p>
+          <p><img src="../python.gif" alt="Html"> Exercices : <select onChange="if (this.value!='') window.location.href=this.value;"><option selected="selected" value="">Scripts Python</option><option value="tnsi-poo-rectangle.py">1. Rectangle</option><option value="tnsi-poo-point.py">2. Point</option><option value="tnsi-poo-fraction.py">3. Fraction</option><option value="tnsi-poo-date.py">4. Date</option><option value="tnsi-poo-comptebancaire.py">5. Compte Bancaire</option></select></p>
+          <p><img src="../html.gif" alt="Html"> TP : <a href="https://glassus.github.io/terminale_nsi/T2_Programmation/2.1_Programmation_Orientee_Objet/TP/" Title="Lien extérieur"> Balles rebondissantes avec Pygame <img src="../lien-externe.png" alt=""></a> toujours par Gilles Lassus</p>
+          <p><a href="tnsi-poo-cours.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Synthèse de cours</a> &nbsp;&nbsp;(<a href="tnsi-poo-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+        </fieldset>
+        <fieldset><legend>Types de données abstraits : Listes, Piles, Files</legend>
+          <p><img src="../jupyter.gif" alt="Ipynb"> Comprendre la différence entre <a href="https://notebook.basthon.fr/?from=https://tfontanet.github.io/tnsi/tnsi-listes-interfaceimplementations.ipynb">"interface" et "implémentation"</a></p>
+          <p><img src="../html.gif" alt="Html"> Introduction <a href="https://info-mounier.fr/terminale_nsi/structures_donnees/listes.php" Title="Lien extérieur">sur les listes <img src="../lien-externe.png" alt=""></a> par Germain Becker</p>
+          <p><img src="../jupyter.gif" alt="Ipynb"> TP1 : Liste <a href="https://notebook.basthon.fr/?from=https://tfontanet.github.io/tnsi/tnsi-listes-recursive.ipynb">définie récursivement</a></p>
+          <p><img src="../python.gif" alt="Html"> TP2 : Implémentation d'une liste avec <a href="tnsi-listes-listeimplementeeavec-objetlistpython.py">l'objet list de Python</a>, avec <a href="tnsi-listes-listeimplementeeavec-listeschainees.py">une liste chaînée</a>, avec <a href="tnsi-listes-listeimplementeeavec-tableauxtaillefixe.py">un tableau de taille fixe</a></p>
+          <p><img src="../html.gif" alt="Html"> Introduction <a href="https://info-mounier.fr/terminale_nsi/structures_donnees/piles-files" Title="Lien extérieur">sur les piles et les files <img src="../lien-externe.png" alt=""></a> par Germain Becker</p>
+          <p><img src="../python.gif" alt="Html"> TP3 : Implémentation d'une pile avec <a href="tnsi-listes-pileimplementeeavec-objetlistpython.py">l'objet list de Python</a>, avec <a href="tnsi-listes-pileimplementeeavec-listeschainees.py">une liste chaînée</a></p>
+          <p><img src="../python.gif" alt="Html"> TP4 : Implémentation d'une file avec <a href="tnsi-listes-fileimplementeeavec-listeschainees.py">une liste chaînée</a>, avec <a href="tnsi-listes-fileimplementeeavec-2piles.py">deux piles</a></p>
+          <p><a href="tnsi-listes-cours.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Synthèse de cours</a> &nbsp;&nbsp;(<a href="tnsi-listes-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+        </fieldset>
+        <fieldset><legend>Base de données</legend>
+          <p><img src="../html.gif" alt="Html"> Introduction <a href="https://glassus.github.io/terminale_nsi/T4_Bases_de_donnees/4.1_Modele_relationnel/cours/" Title="Lien extérieur">au modèle relationnel <img src="../lien-externe.png" alt=""></a> par Gilles Lassus</p>
+          <p><a href="tnsi-sgbd-mementosql.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Memento SQL</a> &nbsp;&nbsp;(<a href="tnsi-sgbd-mementosql.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><img src="../html.gif" alt="Html"> Outil de gestion de base de donnée : <a href="https://sqliteonline.com/" Title="Lien extérieur">SQLite online <img src="../lien-externe.png" alt=""></a></p>
+          <p><img src="../html.gif" alt="Html"> Exemples de bases de données à télécharger : <select onChange="if (this.value!='') window.location.href=this.value;"><option selected="selected" value="">Choisir une base de données</option><option value="tnsi-sgbd-catalogue-musique.db">TP2 - Catalogue musique</option><option value="tnsi-sgbd-livres.db">TP3 - Livres</option></select></p>
+          <p><img src="../html.gif" alt="Html"> TP1 : <a href="https://colibri.unistra.fr/" Title="Lien extérieur">Notions de base en SQL <img src="../lien-externe.png" alt=""></a> par l'académie de Strasbourg : Partie 1 (sauf chapitre 7) et Partie 2 (pas la partie 3)</p>
+          <p><img src="../pdf.gif" alt="Pdf"> TP2 : <a href="tnsi-sgbd-catalogue-musique.pdf" Title="Document pdf">Catalogue de musique</a> &nbsp;&nbsp;(<a href="tnsi-sgbd-catalogue-musique.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><img src="../html.gif" alt="Html"> TP3 : Faire le schéma de la base de données <a href="https://sqliteonline.com/#urldb=https://tfontanet.github.io/tnsi/tnsi-sgbd-livres.db" Title="Lien extérieur">"livres" <img src="../lien-externe.png" alt=""></a>, puis <a href="https://lecluseo.frama.io/leclusemaths/nsi/NSI_T/bdd/prof/sqlpy/" Title="Lien extérieur">faire le TP <img src="../lien-externe.png" alt=""></a> de Olivier Lecluse</p>
+          <p><a href="tnsi-sgbd-cours.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Synthèse de cours</a> &nbsp;&nbsp;(<a href="tnsi-sgbd-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+        </fieldset>
+        <fieldset><legend>Types de données abstraits : Arbres</legend>
+          <p><img src="../pdf.gif" alt="Pdf"> Introduction sur <a href="https://www.nsi-ljm.fr/NSI-TLE/res/res_arbres_cours.pdf" Title="Lien extérieur">les arbres <img src="../lien-externe.png" alt=""></a> par Stéphan Van Zuijlen</p>
+          <p><a href="tnsi-arbres-exos.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Exercices 1</a> &nbsp;&nbsp;(<a href="tnsi-arbres-exos.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><img src="../pdf.gif" alt="Pdf"> Introduction sur <a href="tnsi-arbresbinaires-cours.pdf" Title="Document pdf">les arbres binaires</a> &nbsp;&nbsp;(<a href="tnsi-arbresbinaires-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><a href="tnsi-arbresbinaires-exos.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Exercices 2</a> &nbsp;&nbsp;(<a href="tnsi-arbresbinaires-exos.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><img src="../jupyter.gif" alt="Ipynb"> TP1 : Implémentation d'un arbre binaire avec <a href="https://notebook.basthon.fr/?from=https://tfontanet.github.io/tnsi/tnsi-arbresbinaires-listes.ipynb">des listes</a>, ou <a href="https://notebook.basthon.fr/?from=https://tfontanet.github.io/tnsi/tnsi-arbresbinaires-poo.ipynb">en POO</a></p>
+          <p><img src="../pdf.gif" alt="Pdf"> Introduction sur <a href="tnsi-arbresbinairesderecherche-cours.pdf" Title="Document pdf">les arbres binaires de recherche</a> &nbsp;&nbsp;(<a href="tnsi-arbresbinairesderecherche-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><a href="tnsi-arbresbinairesderecherche-exos.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Exercices 3</a> &nbsp;&nbsp;(<a href="tnsi-arbresbinairesderecherche-exos.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><img src="../jupyter.gif" alt="Ipynb"> TP2 : Implémentation d'un arbre binaire de recherche <a href="https://notebook.basthon.fr/?from=https://tfontanet.github.io/tnsi/tnsi-arbresbinairesderecherche.ipynb">en POO</a></p>
+          <p><a href="tnsi-arbres-cours.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Synthèse de cours</a> &nbsp;&nbsp;(<a href="tnsi-arbres-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+        </fieldset>
+        <fieldset><legend>Processus</legend>
+          <p><img src="../html.gif" alt="Html"> Introduction sur les <a href="https://mcoilhac.forge.apps.education.fr/term/processus/1_processus/" Title="Lien extérieur">processus <img src="../lien-externe.png" alt=""></a>, sur <a href="https://mcoilhac.forge.apps.education.fr/term/processus/2_ordonnancement/" Title="Lien extérieur">l'ordonnancement <img src="../lien-externe.png" alt=""></a>, puis sur <a href="https://mcoilhac.forge.apps.education.fr/term/processus/4_interblocage/" Title="Lien extérieur">l'interblocage <img src="../lien-externe.png" alt=""></a> par Mireille Coilhac</p>
+          <p><img src="../pdf.gif" alt="Pdf"> TP : <a href="tnsi-processus-commandeslinux.pdf" Title="Document pdf">Commandes Linux à connaître</a> &nbsp;&nbsp;(<a href="tnsi-processus-commandeslinux.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><a href="tnsi-processus-cours.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Synthèse de cours</a> &nbsp;&nbsp;(<a href="tnsi-processus-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+        </fieldset>
+        <fieldset><legend>Diviser pour régner</legend>
+          <p><a href="tnsi-diviserpourregner-cours.pdf" Title="Document pdf"><img src="../pdf.gif" alt="Pdf"> Synthèse de cours</a> &nbsp;&nbsp;(<a href="tnsi-diviserpourregner-cours.odt" Title="Source LibreOffice">avec&nbsp;<img src="../writer.gif" alt="LibreOffice"></a>)</p>
+          <p><img src="../python.gif" alt="Html"> TP1 : <a href="tnsi-diviserpourregner-dichotomie.py">Recherche par dichotomie</a></p>
+          <p><img src="../python.gif" alt="Html"> TP2 : <a href="tnsi-diviserpourregner-exponentiationrapide.py">Exponentiation rapide</a></p>
+          <p><img src="../python.gif" alt="Html"> TP3 : <a href="tnsi-diviserpourregner-trifusion.py">Tri fusion</a></p>
+          <p><img src="../python.gif" alt="Html"> TP4 : <a href="tnsi-diviserpourregner-quarttourtableau.py">Quart de tour d'un tableau</a>, puis <a href="tnsi-diviserpourregner-quarttourimage.py">Quart de tour d'une image</a> (<a href="eiffel.gif">image à télécharger</a>)</p>
+        </fieldset>
+        <fieldset><legend>Routage d'un paquet sur Internet</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <fieldset><legend>Types de données abstraits : Graphes</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <fieldset><legend>Chiffrement des communications</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <fieldset><legend>Programmation dynamique</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <fieldset><legend>Programme en tant que donnée</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <fieldset><legend>Recherche d'un motif dans un texte</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <fieldset><legend>Programmation fonctionnelle</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <fieldset><legend>System On Chip</legend>
+          Patience, ça arrive !
+        </fieldset>
+        <div style="text-align: center"><a href="#top"><img src="../top.gif" width="20" height="13" alt="haut"></a></div>
+        <br><br><br><hr>Tous les documents ci-dessus sont publiés sous <a href="https://www.gnu.org/copyleft/copyleft.fr.html" Title="Lien extérieur">licence GFDL (Copyleft) <img src="../lien-externe.png" alt=""></a> : Vous pouvez donc les redistribuer ou les modifier, ils sont là pour ça.
+      </div>
+    </div>
+  </body>
+</html>
