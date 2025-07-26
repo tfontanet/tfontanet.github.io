@@ -1,7 +1,4 @@
-# 1) Vidéo : https://www.youtube.com/watch?v=GaQ2S6CxtXQ
-# 2) Animation : https://physalgo.fr/Dariush_Tris/index.html?3
-# 
-# 3) Implémenter en Python la fonction fusion ci-dessous :
+# 1) Implémenter en Python la fonction fusion ci-dessous :
 
 def fusion(liste1, liste2):
     """
@@ -20,7 +17,7 @@ assert(fusion([],[1, 8, 10])) == [1, 8, 10]
 assert(fusion([3, 6, 7],[-1, 0])) == [-1, 0, 3, 6, 7]
 
 
-#4) Implémenter en Python la fonction trifusion ci-dessous :
+# 2) Implémenter en Python la fonction trifusion ci-dessous :
 
 def trifusion(liste):
     """

@@ -1,7 +1,5 @@
-# 1) Regarder la vidéo (sans son) : https://www.youtube.com/watch?v=OXo-uzzD4Js
-# 2) Comprendre le principe de l'algorithme en l'appliquant à un tableau de nombres :
-#    "4 - TD Quart de tour sur un tableau de nombres.pdf"
-# 3) Compléter les fonctions ci-dessous en testant bien chaque fonction
+# On cherche ici à comprendre le principe de l'algorithme en l'appliquant à un tableau de nombres :
+# -> Compléter les fonctions ci-dessous en testant bien chaque fonction
 #    avant de passer à la suivante ;-)
 
 def crée_tableau(n):

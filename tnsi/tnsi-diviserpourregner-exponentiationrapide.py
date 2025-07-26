@@ -30,8 +30,8 @@ def exp_rapide(x, n):
     """
     On peut calculer x^n plus rapidement :
     x^0 = 1
-    si n est pair :   x^n = (x^(n/2))^2
-    si n est impair : x^n = x * (x^((n-1)/2)^2
+    si n est pair :   x^n = x^(n/2) * x^(n/2)
+    si n est impair : x^n = x * x^(n-1)
 
     Paramètres :
         x : flottant ou entier
@@ -53,5 +53,3 @@ assert exp_rapide(-3, 2) == 9
 #   Combien de multiplications va-t-on faire en tout ?
 #   Quelle est la complexité de la fonction ci-dessus ?
 #   Comparer la complexité des 2 méthodes
-#   Puis regarder la vidéo : https://www.youtube.com/watch?v=UcT_4cWfnAs
-
