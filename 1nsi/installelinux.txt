@@ -16,7 +16,7 @@ sudo apt install -y locales-all
 sudo localectl set-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR
 
 # Telecharger et Installer Gameshell
-sudo apt install -y gettext-base man-db psmisc nano tree bsdmainutils x11-apps
+sudo apt install -y gettext man-db procps psmisc nano tree ncal x11-apps wget
 wget https://github.com/phyver/GameShell/releases/download/latest/gameshell.sh
 mkdir ~/Gameshell
 mv gameshell.sh ~/Gameshell
@@ -53,9 +53,9 @@ echo msgwindow_visible=false >> ".config/geany/geany.conf"
 
 # Telecharger et Installer Filius
 sudo apt install -y default-jdk
-wget https://www.lernsoftware-filius.de/downloads/Setup/filius_2.7.1_all.deb
-sudo apt install -y ./filius_2.7.1_all.deb
-rm -f ./filius_2.7.1_all.deb
+wget https://www.lernsoftware-filius.de/downloads/Setup/filius_2.9.4_all.deb
+sudo apt install -y ./filius_2.9.4_all.deb
+rm -f ./filius_2.9.4_all.deb
 
 # Installer HTTPie
 sudo apt install -y httpie
