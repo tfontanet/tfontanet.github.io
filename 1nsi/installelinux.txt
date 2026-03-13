@@ -57,7 +57,8 @@ wget https://www.lernsoftware-filius.de/downloads/Setup/filius_2.9.4_all.deb
 sudo apt install -y ./filius_2.9.4_all.deb
 rm -f ./filius_2.9.4_all.deb
 
-# Installer HTTPie
+# Installer traceroute et HTTPie
+sudo apt install -y traceroute
 sudo apt install -y httpie
 
 # Installer DB Browser for SQLite
