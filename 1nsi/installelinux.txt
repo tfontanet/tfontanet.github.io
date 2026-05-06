@@ -22,9 +22,12 @@ mkdir ~/Gameshell
 mv gameshell.sh ~/Gameshell
 
 # Telecharger et Installer Thonny
-wget https://thonny.org/installer-for-linux
-yes "" | bash ./installer-for-linux
-rm -f ./installer-for-linux
+# wget https://thonny.org/installer-for-linux
+# yes "" | bash ./installer-for-linux
+# rm -f ./installer-for-linux
+wget https://github.com/thonny/thonny/releases/download/v4.1.7/thonny-4.1.7.bash
+yes | bash thonny-4.1.7.bash
+rm -f ./thonny-4.1.7.bash
 
 mkdir -p ".config/Thonny/"
 echo [general] > ".config/Thonny/configuration.ini"
@@ -62,4 +65,4 @@ sudo apt install -y traceroute
 sudo apt install -y httpie
 
 # Installer DB Browser for SQLite
-sudo apt install -y sqlitebrowser
+# sudo apt install -y sqlitebrowser
