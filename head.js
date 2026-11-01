@@ -14,12 +14,3 @@ function avertissement()
   message +=    "    puis, à la fin seulement, comparer avec le corrigé !";
   alert(message);
 }
-
-function sessionAplusix()
-{
-  var numerosession = prompt("Quel est le numéro de la session Aplusix que vous voulez revoir ?", "");
-  if (numerosession != null && parseInt(numerosession) && !isNaN(numerosession))
-  {
-    document.location.href="http://epsilon-publi.net/_programs/apx_get_trace_html.php?lang=fr&IdSession="+parseInt(numerosession);
-  }
-}
